@@ -1,0 +1,38 @@
+.navbar {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding: 0.5rem 4rem;
+  background: blueviolet;
+
+  .navbarLogoContainer {
+    padding: 0;
+    margin: 0;
+
+    .navbarLogo {
+      width: max-content;
+      height: max-content;
+      border: 1px solid red;
+      border-radius: 10%;
+      cursor: pointer;
+
+      .code {
+        font-size: 2.2rem;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .navbarLinksContainer {
+      padding: 0;
+      margin: 0;
+
+      .navLinks {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+  }
+}
