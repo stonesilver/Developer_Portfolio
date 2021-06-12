@@ -2,37 +2,186 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 0.2fr 0.5fr;
+  justify-content: space-between;
   padding: 0.5rem 4rem;
-  background: blueviolet;
+  overflow: hidden;
+  // background: blueviolet;
+
+  @media all and (max-width: 768px) {
+    padding: 0.5rem 1rem;
+  }
 
   .navbarLogoContainer {
+    display: flex;
+    align-items: center;
     padding: 0;
     margin: 0;
 
     .navbarLogo {
       width: max-content;
       height: max-content;
-      border: 1px solid red;
       border-radius: 10%;
       cursor: pointer;
 
       .code {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
         font-weight: 900;
+      }
+    }
+
+    .name {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-left: 0.5rem;
+
+      @media all and (max-width: 768px) {
+        font-size: 1.3rem;
       }
     }
   }
 
   .navbarLinksContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    #mobileToggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 45px;
+      height: 40px;
       padding: 0;
       margin: 0;
+      z-index: 10;
+      opacity: 0;
+      cursor: pointer;
 
-      .navLinks {
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      @media all and (max-width: 768px) {
+        &:checked ~ .navLinks {
+          opacity: 1;
+          left: 0;
+        }
+
+        &:checked ~ .mobileToggle .hamburgerContainer .hambuger:nth-child(2) {
+          right: -100px;
+        }
+
+        &:checked ~ .mobileToggle .hamburgerContainer .hambuger:first-child {
+          transform: rotate(45deg) translateY(8px) translateX(5px);
+          color: red;
+          width: 100%;
+        }
+
+        &:checked ~ .mobileToggle .hamburgerContainer .hambuger:last-child {
+          transform: rotate(-45deg) translateY(-8px) translateX(5px);
+          color: red;
+          width: 100%;
+        }
       }
+    }
+
+    .mobileToggle {
+      display: none;
+      position: relative;
+      width: 45px;
+      height: 40px;
+      z-index: 5;
+
+      @media all and (max-width: 768px) {
+        display: block;
+      }
+
+      // &:hover ~ .navLinks {
+      //   opacity: 1;
+      //   background: red;
+      // }
+
+      // #mobileToggle {
+      //   position: absolute;
+      //   top: 0;
+      //   right: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   padding: 0;
+      //   margin: 0;
+      //   z-index: 10;
+      //   visibility: hidden;
+
+      //   &:checked .navLinks {
+      //     opacity: 1;
+      //     background: red;
+      //   }
+      // }
+
+      .hamburgerContainer {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 0.5rem;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 0.2rem;
+        // background-color: rgb(255, 255, 255);
+
+        .hambuger {
+          position: relative;
+          right: 0;
+          width: 75%;
+          border: 1px solid;
+          transition: all .5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+          &:nth-child(2) {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .navLinks {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(5, max-content);
+      grid-gap: 1rem;
+      justify-content: flex-end;
+
+      @media all and (max-width: 768px) {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: -200vh;
+        min-height: 100vh;
+        width: 100%;
+        background: rgba(148, 111, 111, 0.705);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 80px);
+        justify-content: center;
+        grid-gap: 0.5rem;
+        padding: 8rem 0;
+        transition: all .8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+      }
+
+      .link {
+        list-style: none;
+        padding: 0.5rem;
+        font-size: 1.05rem;
+        font-weight: 500;
+        text-align: center;
+
+        a {
+          display: block;
+          // background: rgb(0, 153, 255);
+        }
+      }
+    }
   }
 }
