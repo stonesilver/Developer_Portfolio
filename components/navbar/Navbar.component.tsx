@@ -1,5 +1,12 @@
+import React, { useState } from 'react';
+import { Dark, Light } from '../svgIcons/Icons';
 import navbarStyles from './navbar.module.scss';
+
 const NavBar = () => {
+  const [checked, setChecked] = useState(false);
+  const checkboxOnclick = () => {
+    setChecked(!checked);
+  };
   return (
     <nav className={navbarStyles.navbar}>
       <div className={navbarStyles.navbarLogoContainer}>
@@ -36,7 +43,18 @@ const NavBar = () => {
           <li className={navbarStyles.link}>
             <a href='#contact'>Contact</a>
           </li>
-          <li className={navbarStyles.link}>theme toggle</li>
+          <li className={navbarStyles.theme}>
+            <input
+              type='checkbox'
+              name='themeToggle'
+              checked={checked}
+              onChange={checkboxOnclick}
+              id={navbarStyles.themeToggle}
+            />
+            <div className={navbarStyles.themeToggle}>
+              <Dark /> <Light />
+            </div>
+          </li>
         </ul>
       </div>
     </nav>
