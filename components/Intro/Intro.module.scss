@@ -1,38 +1,202 @@
+$fillColor: #6c63ff;
+$primaryColor: #060616;
+
 .intro {
-  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 0.045fr;
-  grid-gap: 1rem;
+  grid-template-columns: 1fr 0.02fr;
+  width: 100%;
   overflow: hidden;
-  margin-top: 1rem;
+  margin-top: 3rem;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
   }
 
-  .introDetails {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid red;
-  }
+  .introContent {
+    width: 100%;
 
-  .introImage {
-    border: 1px solid red;
+    .introGrid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr 0.045fr;
+      grid-template-areas: 'intro image social';
+      grid-gap: 1rem;
+      overflow: hidden;
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          'image'
+          'intro'
+          'social';
+      }
+
+      .introDetails {
+        grid-area: intro;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0.5rem;
+
+        .hello {
+          font-size: 1.6rem;
+          font-weight: 500;
+          color: $fillColor;
+          letter-spacing: 1px;
+        }
+
+        .name {
+          font-size: 3rem;
+          font-weight: 600;
+          letter-spacing: 1px;
+
+          @media screen and (max-width: 414px) {
+            font-size: 2.2rem;
+          }
+
+          @media screen and (max-width: 320px) {
+            font-size: 1.8rem;
+          }
+        }
+
+        .jobDescription {
+          font-size: 1.2rem;
+          font-weight: 500;
+          opacity: 0.7;
+
+          @media screen and (max-width: 414px) {
+            font-size: 1.1rem;
+          }
+
+          @media screen and (max-width: 360px) {
+            font-size: 1rem;
+          }
+
+          @media screen and (max-width: 280px) {
+            font-size: 0.78rem;
+          }
+        }
+
+        .cvHireMeBtn {
+          display: flex;
+          grid-gap: 3rem;
+          margin-top: 2.5rem;
+
+          @media screen and (max-width: 768px) {
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+        }
+      }
+
+      .introImage {
+        grid-area: image;
+        padding: 0 1rem;
+      }
+
+      .scrollDown {
+        margin-top: 2rem;
+        margin-left: 0.5rem;
+      }
+    }
   }
 
   .introSocials {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    grid-gap: 4rem;
-    border: 1px solid red;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 2rem;
+    }
+
+    .socialLinks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 1.4rem;
+      padding: 0.1rem 0;
+      background: rgb(255, 255, 255);
+      border-radius: 50%;
+
+      @media screen and (max-width: 768px) {
+        width: 25px;
+        height: 25px;
+        padding: 0 0.08rem;
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(-11px);
+      width: 1px;
+      height: 100%;
+      background: $primaryColor;
+      z-index: -1;
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 1px;
+        top: 0;
+        right: 0;
+        transform: translateY(12px);
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -5px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid black;
+
+        @media screen and (max-width: 768px) {
+          top: -2px;
+          right: -3px;
+          transform: rotate(90deg);
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: -5px;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid black;
+
+        @media screen and (max-width: 768px) {
+          bottom: -2px;
+          left: -3px;
+          transform: rotate(90deg);
+        }
+      }
+    }
 
     @media screen and (max-width: 768px) {
       flex-direction: row;
-    //   height: 3rem;
     }
   }
 }

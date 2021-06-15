@@ -1,0 +1,29 @@
+$fillColor: #6c63ff;
+$white: #fff;
+
+.button {
+  width: max-content;
+  padding: 1.3rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+  color: $fillColor;
+  border: 1px solid $fillColor;
+  border-radius: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background: $fillColor;
+    color: $white;
+  }
+}
+
+.backgroundColor {
+  background: $fillColor;
+  color: $white;
+
+  &:hover {
+    background: $white;
+    color: $fillColor;
+  }
+}

@@ -1,0 +1,38 @@
+$fillColor: #6c63ff;
+$primaryColor: #060616;
+
+.aboutMe {
+  display: flex;
+  align-items: center;
+  grid-gap: .5rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  color: $fillColor;
+
+  .text {
+    width: max-content;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .iconContainer {
+    position: relative;
+
+    .arrow {
+      position: absolute;
+      left: 0;
+      width: 40px;
+      border-top: 2px solid;
+
+      &::after {
+        content: '>';
+        position: absolute;
+        top: -20px;
+        right: -5px;
+        font-size: 1.6rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

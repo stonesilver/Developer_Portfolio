@@ -1,28 +1,37 @@
 import { Developer, Github, Linkedin, Twitter } from '../svgIcons/Icons';
+import Scroll from '../Scroll/Scroll.component';
+import Button from '../button/Button.component';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import introStyles from './Intro.module.scss';
 
 const Intro = () => {
   return (
     <div className={introStyles.intro}>
-      <div className={introStyles.introDetails}>
-        <div className='hello'>Hello, I'm</div>
-        <div className='name'>Ezenwa Chigozie</div>
-        <div className='jobTitle'>
-          I'm a frontend Developer who has an affinity for React Js
+      <div className={introStyles.introContent}>
+        <div className={introStyles.introGrid}>
+          <div className={introStyles.introDetails}>
+            <p className={introStyles.hello}>Hello, I'm</p>
+            <p className={introStyles.name}>Ezenwa Chigozie</p>
+            <p className={introStyles.jobDescription}>
+              <span>{`<FrontendDeveloper affinity={React Js} />
+          `}</span>
+            </p>
+            <div className={introStyles.cvHireMeBtn}>
+              <Button text={'DownLoad CV'} backgroundColor={true} />
+              <Button text={'Hire Me'} backgroundColor={false} />
+            </div>
+          </div>
+          <div className={introStyles.introImage}>
+            <Developer />
+          </div>
         </div>
-        <div className='cvHireMeBtn'>
-          <div className='cvBtn'>
-            <p className='text'>Download CV</p>
-          </div>
-          <div className='hireMeBtn'>
-            <p className='text'>Hire Me CV</p>
-          </div>
+        <div className={introStyles.scrollDown}>
+          <Scroll icon={faArrowDown} text='Scroll Down' />
         </div>
       </div>
-      <div className={introStyles.introImage}>
-        <Developer />
-      </div>
+
       <div className={introStyles.introSocials}>
+        <div className={introStyles.arrow}></div>
         <span className={introStyles.socialLinks}>
           <Github />
         </span>

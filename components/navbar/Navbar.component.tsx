@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Dark, Light } from '../svgIcons/Icons';
 import navbarStyles from './navbar.module.scss';
 
@@ -10,12 +11,15 @@ const NavBar = () => {
   return (
     <nav className={navbarStyles.navbar}>
       <div className={navbarStyles.navbarLogoContainer}>
-        <div className={navbarStyles.navbarLogo}>
+        {/* <div className={navbarStyles.navbarLogo}>
           <span className={navbarStyles.code}>&#60;</span>
+          <span className={navbarStyles.code}>ESC</span>
           <span className={navbarStyles.code}>&#8725;</span>
           <span className={navbarStyles.code}>&#62;</span>
-        </div>
-        <span className={navbarStyles.name}>ESC</span>
+        </div> */}
+        <Link href='/'>
+          <span className={navbarStyles.name}>{'<ESC />'}</span>
+        </Link>
       </div>
       <div className={navbarStyles.navbarLinksContainer}>
         <input

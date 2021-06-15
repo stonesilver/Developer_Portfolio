@@ -20,24 +20,24 @@ export const Light = () => {
         d='M150.9,242.12A107.63,107.63,0,0,0,150,256a106,106,0,1,0,19.59-61.37'
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
       />
       <path
         d='M157.56,216.68c-.17.41-.34.81-.5,1.22'
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
       />
       <line
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
         x1='256'
         x2='256'
         y1='64'
@@ -46,9 +46,9 @@ export const Light = () => {
       <line
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
         x1='256'
         x2='256'
         y1='389'
@@ -57,9 +57,9 @@ export const Light = () => {
       <line
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
         x1='120.24'
         x2='161.96'
         y1='120.24'
@@ -68,9 +68,9 @@ export const Light = () => {
       <line
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
         x1='350.04'
         x2='391.76'
         y1='350.04'
@@ -79,9 +79,9 @@ export const Light = () => {
       <line
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
         x1='64'
         x2='123'
         y1='256'
@@ -90,9 +90,9 @@ export const Light = () => {
       <line
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
         x1='389'
         x2='448'
         y1='256'
@@ -101,9 +101,9 @@ export const Light = () => {
       <line
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
         x1='120.24'
         x2='161.96'
         y1='391.76'
@@ -112,9 +112,9 @@ export const Light = () => {
       <line
         fill='none'
         stroke='#02005c'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-        stroke-width='20'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='20'
         x1='350.04'
         x2='391.76'
         y1='161.95'
@@ -135,7 +135,7 @@ export const Developer = () => {
       height='{100%}'
       viewBox='0 0 798.62718 689.22258'
     >
-      <title>dev_productivity</title>
+      <title>Frontend Developer</title>
       <circle cx='435.92153' cy='118.40512' r='73.53607' fill='#a0616a' />
       <path
         d='M581.7223,260.56187s13.8546,104.44259-7.46016,116.16564,126.8231,12.78888,126.8231,12.78888S668.0473,298.9285,682.96762,271.21921Z'
@@ -200,8 +200,8 @@ export const Developer = () => {
         r='25'
         fill='none'
         stroke='#d0cde1'
-        stroke-miterlimit='10'
-        stroke-width='2'
+        strokeMiterlimit='10'
+        strokeWidth='2'
       />
       <circle cx='415.50024' cy='493.32605' r='25' fill='#d0cde1' />
       <rect x='80.44606' y='661.22258' width='28' height='28' fill='#d0cde1' />
@@ -338,7 +338,7 @@ export const Developer = () => {
 export const Github = () => {
   return (
     <svg
-      enable-background='new -1163 1657.697 56.693 56.693'
+      enableBackground='new -1163 1657.697 56.693 56.693'
       height='{100%}'
       id='Layer_1'
       version='1.1'
@@ -347,9 +347,9 @@ export const Github = () => {
     >
       <g>
         <path
-          clip-rule='evenodd'
+          clipRule='evenodd'
           d='M-1134.6598,1662.9163c-13.601,0-24.63,11.0267-24.63,24.6299   c0,10.8821,7.0573,20.1144,16.8435,23.3713c1.2308,0.2279,1.6829-0.5345,1.6829-1.1849c0-0.587-0.0227-2.5276-0.0334-4.5857   c-6.8521,1.4901-8.2979-2.906-8.2979-2.906c-1.1205-2.8467-2.7347-3.6039-2.7347-3.6039   c-2.2349-1.5287,0.1685-1.4972,0.1685-1.4972c2.473,0.1737,3.7755,2.5385,3.7755,2.5385c2.1967,3.7651,5.7618,2.6765,7.1675,2.0472   c0.2211-1.5917,0.8591-2.6786,1.5637-3.2936c-5.4707-0.6226-11.2218-2.7347-11.2218-12.1722c0-2.6888,0.9623-4.8861,2.538-6.611   c-0.2557-0.6206-1.0989-3.1255,0.2386-6.5183c0,0,2.0684-0.6616,6.7747,2.525c1.9648-0.5458,4.0719-0.8195,6.165-0.829   c2.093,0.0095,4.2017,0.2832,6.17,0.829c4.7012-3.1866,6.7665-2.525,6.7665-2.525c1.3406,3.3928,0.4974,5.8977,0.2417,6.5183   c1.5793,1.7249,2.5348,3.9221,2.5348,6.611c0,9.4602-5.7618,11.5428-11.2465,12.1527c0.8834,0.7644,1.6704,2.2632,1.6704,4.561   c0,3.2955-0.0282,5.9479-0.0282,6.7592c0,0.6556,0.4432,1.4236,1.6915,1.1818c9.7812-3.2605,16.8296-12.4896,16.8296-23.3682   C-1110.0299,1673.943-1121.0574,1662.9163-1134.6598,1662.9163z'
-          fill-rule='evenodd'
+          fillRule='evenodd'
         />
         <path d='M-1149.9611,1698.2793c-0.0542,0.1227-0.2469,0.1593-0.4222,0.0753c-0.1788-0.0804-0.2788-0.2473-0.2211-0.37   c0.053-0.126,0.2457-0.161,0.4242-0.0769C-1150.0013,1697.9882-1149.8993,1698.1566-1149.9611,1698.2793L-1149.9611,1698.2793z    M-1150.2642,1698.0547' />
         <path d='M-1148.9634,1699.3922c-0.1174,0.1086-0.3473,0.0581-0.5031-0.1139c-0.1613-0.1718-0.1912-0.4016-0.072-0.5118   c0.1211-0.1088,0.3438-0.0579,0.505,0.1139C-1148.8721,1699.0541-1148.8407,1699.2819-1148.9634,1699.3922L-1148.9634,1699.3922z    M-1149.1984,1699.14' />
@@ -374,7 +374,7 @@ export const Linkedin = () => {
 export const Twitter = () => {
   return (
     <svg
-      enable-background='new 0 0 56.693 56.693'
+      enableBackground='new 0 0 56.693 56.693'
       height='{100%}'
       id='Layer_1'
       version='1.1'
