@@ -1,0 +1,25 @@
+$fillColor: #6c63ff;
+
+#skills {
+  padding: 2rem 0;
+
+  .header {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .skillsRow {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    grid-gap: 1rem;
+    overflow: auto;
+    margin-top: 1rem;
+    padding: 0.8rem 0;
+  }
+}

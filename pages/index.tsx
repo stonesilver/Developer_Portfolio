@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import Intro from '../components/Intro/Intro.component';
 import AboutMe from '../components/AboutMe/AboutMe.component';
+import Skills from '../components/Skills/Skills.component';
+import Projects from '../components/Projects/Projects.component';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
       <main className={styles.main}>
         <Intro />
         <AboutMe />
+        <Skills />
+        <Projects />
       </main>
     </div>
   );

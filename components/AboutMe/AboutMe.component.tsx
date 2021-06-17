@@ -6,7 +6,7 @@ import React from 'react';
 
 const AboutMe = () => {
   return (
-    <div className={aboutMeStyles.aboutMe}>
+    <div id={aboutMeStyles.aboutMe}>
       <SectionHeader text='About Me' />
       <section className={aboutMeStyles.aboutMeContent}>
         <div className={aboutMeStyles.info}>
