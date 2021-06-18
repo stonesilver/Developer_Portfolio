@@ -39,10 +39,10 @@ const NavBar = () => {
             <a href='#about'>About</a>
           </li>
           <li className={navbarStyles.link}>
-            <a href='#works'>Works</a>
+            <a href='#skills'>Skills</a>
           </li>
           <li className={navbarStyles.link}>
-            <a href='#services'>Services</a>
+            <a href='#projects'>Projects</a>
           </li>
           <li className={navbarStyles.link}>
             <a href='#contact'>Contact</a>

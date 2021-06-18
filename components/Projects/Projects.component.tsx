@@ -6,15 +6,14 @@ import projectStyles from './Projects.module.scss';
 const Projects = () => {
   return (
     <div className={projectStyles.project}>
-      <SectionHeader text='Projects' />
+      <SectionHeader text='Projects' info='Frontend Projects' />
       <div className={projectStyles.projectsContainer}>
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {[0, 1, 2, 3].map((item, index) => (
+          <ProjectCard key={index}/>
+        ))}
       </div>
       <div className={projectStyles.discoverMore}>
-        <Button text='Discover More' backgroundColor={true} />
+        <Button text='Discover More' backgroundColor={true} type={false} />
       </div>
     </div>
   );

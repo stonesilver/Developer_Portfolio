@@ -17,7 +17,7 @@ const SkillCard = ({ color, name, percentage }) => {
               <style jsx>
                 {`
                   transform: rotate(${left}deg);
-                  background: ${color}
+                  background: ${color};
                 `}
               </style>
             </div>
@@ -27,7 +27,7 @@ const SkillCard = ({ color, name, percentage }) => {
               <style jsx>
                 {`
                   transform: rotate(${right}deg);
-                  background: ${color}
+                  background: ${color};
                 `}
               </style>
             </div>
@@ -35,7 +35,7 @@ const SkillCard = ({ color, name, percentage }) => {
         </div>
       </div>
       <div className={skillStyles.cardBody}>
-        <span className='text'>{name}</span>
+        <span className={skillStyles.text}>{name}</span>
       </div>
     </div>
   );

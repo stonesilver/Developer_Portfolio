@@ -1,38 +1,56 @@
 $fillColor: #6c63ff;
 $primaryColor: #060616;
 
-.aboutMe {
-  display: flex;
-  align-items: center;
-  grid-gap: .5rem;
+.sectionHeader {
   width: 100%;
-  height: 100%;
-  padding: 1rem 0;
-  color: $fillColor;
 
-  .text {
-    width: max-content;
-    font-size: 1.1rem;
-    font-weight: 500;
+  .aboutMe {
+    display: flex;
+    align-items: center;
+    grid-gap: 0.5rem;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    color: $fillColor;
+
+    .text {
+      width: max-content;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .iconContainer {
+      position: relative;
+
+      .arrow {
+        position: absolute;
+        left: 0;
+        width: 40px;
+        border-top: 2px solid;
+
+        &::after {
+          content: '>';
+          position: absolute;
+          top: -20px;
+          right: -5px;
+          font-size: 1.6rem;
+          font-weight: 500;
+        }
+      }
+    }
   }
 
-  .iconContainer {
-    position: relative;
+  .info {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
 
-    .arrow {
-      position: absolute;
-      left: 0;
-      width: 40px;
-      border-top: 2px solid;
+    @media screen and (max-width: 765px) {
+      font-size: 1.2rem;
+    }
 
-      &::after {
-        content: '>';
-        position: absolute;
-        top: -20px;
-        right: -5px;
-        font-size: 1.6rem;
-        font-weight: 500;
-      }
+    @media screen and (max-height: 640px) {
+      font-size: 0.85rem;
     }
   }
 }

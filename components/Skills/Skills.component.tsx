@@ -6,10 +6,10 @@ import skillsStyles from './Skills.module.scss';
 const Skills = () => {
   return (
     <div id={skillsStyles.skills}>
-      <SectionHeader text='Skills' />
-      <div className={skillsStyles.header}>
+      <SectionHeader text='Skills' info='My Arsenal of Skills' />
+      {/* <div className={skillsStyles.header}>
         <span className={skillsStyles.text}>My Arsenal of Skills</span>
-      </div>
+      </div> */}
       <div className={skillsStyles.skillsRow}>
         {skillsArray.map(({ name, percentage, color }, index) => (
           <SkillCard

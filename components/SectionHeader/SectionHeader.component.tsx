@@ -1,14 +1,17 @@
 import SectionHeaderStyles from './SectionHeader.module.scss';
 
-const SectionHeader = ({text}) => {
+const SectionHeader = ({ text, info }) => {
   return (
-    <div>
-      <header className={SectionHeaderStyles.aboutMe}>
+    <div className={SectionHeaderStyles.sectionHeader}>
+      <div className={SectionHeaderStyles.aboutMe}>
         <span className={SectionHeaderStyles.text}>{text}</span>
         <span className={SectionHeaderStyles.iconContainer}>
-            <span className={SectionHeaderStyles.arrow}></span>
+          <span className={SectionHeaderStyles.arrow}></span>
         </span>
-      </header>
+      </div>
+      <div className={SectionHeaderStyles.info}>
+        <span className={SectionHeaderStyles.text}>{info}</span>
+      </div>
     </div>
   );
 };

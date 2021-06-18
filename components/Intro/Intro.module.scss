@@ -105,11 +105,12 @@ $primaryColor: #060616;
         grid-area: image;
         padding: 0 1rem;
       }
-
-      .scrollDown {
-        margin-top: 2rem;
-        margin-left: 0.5rem;
-      }
+    }
+    .scrollDown {
+      margin-top: 2rem;
+      margin-left: 0.5rem;
+      display: flex;
+      justify-content: flex-start;
     }
   }
 

@@ -17,8 +17,12 @@ const Intro = () => {
           `}</span>
             </p>
             <div className={introStyles.cvHireMeBtn}>
-              <Button text={'DownLoad CV'} backgroundColor={true} />
-              <Button text={'Hire Me'} backgroundColor={false} />
+              <Button
+                text={'DownLoad CV'}
+                backgroundColor={true}
+                type={false}
+              />
+              <Button text={'Hire Me'} backgroundColor={false} type={false} />
             </div>
           </div>
           <div className={introStyles.introImage}>
@@ -26,7 +30,7 @@ const Intro = () => {
           </div>
         </div>
         <div className={introStyles.scrollDown}>
-          <Scroll icon={faArrowDown} text='Scroll Down' />
+          <Scroll icon={faArrowDown} text='Scroll Down' reverse={false} />
         </div>
       </div>
 

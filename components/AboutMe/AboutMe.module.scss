@@ -17,22 +17,9 @@ $fillColor: #6c63ff;
     flex-direction: column;
     grid-gap: 3rem;
 
-    .info {
-      font-size: 1.5rem;
-      font-weight: 500;
-      margin-top: 1rem;
-
-      @media screen and (max-width: 765px) {
-        font-size: 1.2rem;
-      }
-
-      @media screen and (max-height: 640px) {
-        font-size: .85rem;
-      }
-    }
-
     .thinkSolveDebug {
       width: 100%;
+      margin-top: 3rem;
 
       .text {
         font-size: 3rem;

@@ -3,6 +3,7 @@ import Intro from '../components/Intro/Intro.component';
 import AboutMe from '../components/AboutMe/AboutMe.component';
 import Skills from '../components/Skills/Skills.component';
 import Projects from '../components/Projects/Projects.component';
+import Contact from '../components/Contact/Contact.component';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         <AboutMe />
         <Skills />
         <Projects />
+        <Contact />
       </main>
     </div>
   );
