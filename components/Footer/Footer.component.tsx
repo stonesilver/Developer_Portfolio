@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -9,18 +10,23 @@ const Footer = () => {
     <div className={footerStyles.footer}>
       <div className={footerStyles.footerContent}>
         <div className={footerStyles.logoContainer}>
-          <span className={footerStyles.logo}>ESC</span>
+          <span className={footerStyles.logo}>
+            <Link href='/'>{`<ESC/>`}</Link>
+          </span>
         </div>
         <div className={footerStyles.footerContact}>
-          <span className={footerStyles.footerContactInfo}>
+          <div className={footerStyles.footerContactInfo}>
             <FontAwesomeIcon icon={faPhoneAlt} />
-          </span>
-          <span className={footerStyles.footerContactInfo}>
+            <span className='info'>+234 0706 437 8577</span>
+          </div>
+          <div className={footerStyles.footerContactInfo}>
             <FontAwesomeIcon icon={faMapMarker} />
-          </span>
-          <span className={footerStyles.footerContactInfo}>
+            <span className='info'>Lagos, Nigeria</span>
+          </div>
+          <div className={footerStyles.footerContactInfo}>
             <FontAwesomeIcon icon={faEnvelope} />
-          </span>
+            <span className='info'>ezenwachigozie12@gmail.com</span>
+          </div>
         </div>
         <div className={footerStyles.footerLinks}>
           <ul className={footerStyles.footerLinksContainer}>
@@ -38,6 +44,12 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+      </div>
+      <hr />
+      <div className='createdBy'>
+        <span className='text'>
+          Developed by <span>Ezenwa Chigozie</span>
+        </span>
       </div>
     </div>
   );

@@ -1,0 +1,33 @@
+$fillColor: #6c63ff;
+
+.footer {
+  width: 100%;
+  background: $fillColor;
+  padding: 2rem 0;
+
+  .footerContent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .logoContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.6rem;
+        font-family: 'Monoton', cursive;
+    }
+
+    .footerContact {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1.2rem;
+
+        .footerContactInfo {
+            display: grid;
+            grid-template-columns: .07fr 1fr;
+            column-gap: 1rem;
+            align-items: center;
+        }
+    }
+  }
+}
