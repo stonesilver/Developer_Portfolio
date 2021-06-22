@@ -15,14 +15,11 @@ body {
   }
 
   body {
-  background: black;
-  color: white;
   padding: 0 8rem;
   transition: background 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-
   
   @media screen and (max-width: 768px) {
-    padding: 0;
+    padding: 0 0.5rem;
   }
   }
 

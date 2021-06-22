@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Dark, Light } from '../svgIcons/Icons';
 import navbarStyles from './navbar.module.scss';
 
 const NavBar = () => {
   const [checked, setChecked] = useState(false);
+  const [theme, setTheme] = useState(['white', 'black']);
   const checkboxOnclick = () => {
     setChecked(!checked);
+  };
+  useEffect(() => {
+    document.body.style.background = theme[0];
+    document.body.style.color = theme[1];
+  }, [theme]);
+  const changeTheme = () => {
+    theme[0] === 'white' ? setTheme(['black', 'white']) : setTheme(['white', 'black']);
   };
   return (
     <nav className={navbarStyles.navbar}>
@@ -54,6 +62,7 @@ const NavBar = () => {
               checked={checked}
               onChange={checkboxOnclick}
               id={navbarStyles.themeToggle}
+              onClick={changeTheme}
             />
             <div className={navbarStyles.themeToggle}>
               <Dark /> <Light />
