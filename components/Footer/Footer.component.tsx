@@ -33,21 +33,21 @@ const Footer = () => {
             <li className={footerStyles.footerLink}>
               <a href='#about'>About</a>
             </li>
-            <li className='footerLink'>
+            <li className={footerStyles.footerLink}>
               <a href='#skills'>Skills</a>
             </li>
-            <li className='footerLink'>
+            <li className={footerStyles.footerLink}>
               <a href='#projects'>Projects</a>
             </li>
-            <li className='footerLink'>
+            <li className={footerStyles.footerLink}>
               <a href='#contact'>Contact</a>
             </li>
           </ul>
         </div>
       </div>
       <hr />
-      <div className='createdBy'>
-        <span className='text'>
+      <div className={footerStyles.createdBy}>
+        <span className={footerStyles.text}>
           Developed by <span>Ezenwa Chigozie</span>
         </span>
       </div>

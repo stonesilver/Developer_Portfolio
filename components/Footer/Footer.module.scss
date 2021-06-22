@@ -9,25 +9,58 @@ $fillColor: #6c63ff;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+      padding-left: 1rem;
+    }
+
     .logoContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.6rem;
-        font-family: 'Monoton', cursive;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.6rem;
+      font-family: 'Monoton', cursive;
     }
 
     .footerContact {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 1.2rem;
+      justify-content: center;
+
+      .footerContactInfo {
+        display: grid;
+        grid-template-columns: 0.1fr 1fr;
+        column-gap: 1rem;
+        align-items: center;
+        margin: 0 auto;
+      }
+    }
+
+    .footerLinks {
+      width: 100%;
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+      }
+
+      .footerLinksContainer {
         display: flex;
         flex-direction: column;
-        grid-gap: 1.2rem;
-
-        .footerContactInfo {
-            display: grid;
-            grid-template-columns: .07fr 1fr;
-            column-gap: 1rem;
-            align-items: center;
-        }
+        list-style: none;
+        grid-gap: 0.5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 0;
+      }
     }
+  }
+
+  .createdBy {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
   }
 }
