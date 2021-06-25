@@ -16,16 +16,25 @@ const Footer = () => {
         </div>
         <div className={footerStyles.footerContact}>
           <div className={footerStyles.footerContactInfo}>
-            <FontAwesomeIcon icon={faPhoneAlt} />
-            <span className='info'>+234 0706 437 8577</span>
+            <span>
+              <FontAwesomeIcon icon={faPhoneAlt} />
+            </span>
+
+            <div className='info'>+234 0706 437 8577</div>
           </div>
           <div className={footerStyles.footerContactInfo}>
-            <FontAwesomeIcon icon={faMapMarker} />
-            <span className='info'>Lagos, Nigeria</span>
+            <span>
+              <FontAwesomeIcon icon={faMapMarker} />
+            </span>
+
+            <div className='info'>Lagos, Nigeria</div>
           </div>
           <div className={footerStyles.footerContactInfo}>
-            <FontAwesomeIcon icon={faEnvelope} />
-            <span className='info'>ezenwachigozie12@gmail.com</span>
+            <span>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </span>
+
+            <div className='info'>ezenwachigozie12@gmail.com</div>
           </div>
         </div>
         <div className={footerStyles.footerLinks}>
