@@ -1,7 +1,11 @@
 import Link from 'next/link';
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {
+  faPhoneAlt,
+  faMapMarker,
+  faEnvelope,
+} from '@fortawesome/free-solid-svg-icons';
+// import { faMapMarker } from '@fortawesome/free-solid-svg-icons';
+// import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import footerStyles from './Footer.module.scss';
 

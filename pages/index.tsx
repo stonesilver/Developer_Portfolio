@@ -4,7 +4,6 @@ import AboutMe from '../components/AboutMe/AboutMe.component';
 import Skills from '../components/Skills/Skills.component';
 import Projects from '../components/Projects/Projects.component';
 import Contact from '../components/Contact/Contact.component';
-import Footer from '../components/Footer/Footer.component';
 import styles from '../styles/Home.module.scss';
 
 export default function Home() {
@@ -22,7 +21,6 @@ export default function Home() {
         <Skills />
         <Projects />
         <Contact />
-        <Footer />
       </main>
     </div>
   );

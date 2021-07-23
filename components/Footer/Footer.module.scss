@@ -3,16 +3,16 @@ $fillColor: #6c63ff;
 .footer {
   width: 100%;
   background: $fillColor;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 
   .footerContent {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: .5fr 1fr  .5fr;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
       row-gap: 1rem;
-      padding-left: 1rem;
+    //   padding-left: 1rem;
     }
 
     .logoContainer {
@@ -21,6 +21,10 @@ $fillColor: #6c63ff;
       align-items: center;
       font-size: 1.6rem;
       font-family: 'Monoton', cursive;
+
+      @media screen and (max-width: 768px) {
+        justify-content: flex-start;
+      }
     }
 
     .footerContact {
@@ -28,6 +32,11 @@ $fillColor: #6c63ff;
       grid-gap: 1.2rem;
       justify-content: center;
       align-items: center;
+
+      @media screen and (max-width: 768px) {
+        justify-content: flex-start;
+        margin-top: 1rem;
+      }
 
       .footerContactInfo {
         display: grid;
@@ -46,11 +55,6 @@ $fillColor: #6c63ff;
 
     .footerLinks {
       width: 100%;
-
-      @media screen and (max-width: 768px) {
-        display: flex;
-        justify-content: center;
-      }
 
       .footerLinksContainer {
         display: flex;
