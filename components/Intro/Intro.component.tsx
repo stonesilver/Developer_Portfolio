@@ -2,7 +2,7 @@ import { Developer, Github, Linkedin, Twitter } from '../svgIcons/Icons';
 import Scroll from '../Scroll/Scroll.component';
 import Button from '../button/Button.component';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import Dev from '../../public/images/dev.png'
+import Dev from '../../public/images/dev.png';
 import introStyles from './Intro.module.scss';
 
 const Intro = () => {
@@ -26,9 +26,9 @@ const Intro = () => {
               <Button text={'Hire Me'} backgroundColor={false} type={false} />
             </div>
           </div>
-          <div className={introStyles.introImage}>
+          <div className={introStyles.introImageContainer}>
             {/* <Developer /> */}
-            <img src={Dev} alt="developer"/>
+            <img src={Dev} alt='developer' className={introStyles.introImage} />
           </div>
         </div>
         <div className={introStyles.scrollDown}>
