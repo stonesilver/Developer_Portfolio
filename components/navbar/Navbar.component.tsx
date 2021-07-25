@@ -14,7 +14,9 @@ const NavBar = () => {
     document.body.style.color = theme[1];
   }, [theme]);
   const changeTheme = () => {
-    theme[0] === 'white' ? setTheme(['black', 'white']) : setTheme(['white', 'black']);
+    theme[0] === 'white'
+      ? setTheme(['black', 'white'])
+      : setTheme(['white', 'black']);
   };
   return (
     <nav className={navbarStyles.navbar}>
@@ -65,7 +67,7 @@ const NavBar = () => {
               onClick={changeTheme}
             />
             <div className={navbarStyles.themeToggle}>
-              <Dark /> <Light />
+              <Light /> <Dark />
             </div>
           </li>
         </ul>

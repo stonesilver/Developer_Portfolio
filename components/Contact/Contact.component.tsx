@@ -3,6 +3,7 @@ import Button from '../button/Button.component';
 import { Contacts } from '../svgIcons/Icons';
 import Scroll from '../Scroll/Scroll.component';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import contactImg from '../../public/images/contact-me.jpg';
 import contactStyles from './Contact.module.scss';
 
 const Contact = () => {
@@ -44,7 +45,12 @@ const Contact = () => {
           </form>
         </div>
         <div className={contactStyles.imageContainer}>
-          <Contacts />
+          {/* <Contacts /> */}
+          <img
+            src={contactImg}
+            alt='contactMe'
+            className={contactStyles.image}
+          />
         </div>
       </div>
       <div className={contactStyles.scrollUp}>

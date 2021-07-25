@@ -3,6 +3,10 @@ $fillColor: #6c63ff;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -30,11 +34,11 @@ body {
 }
 
 body {
-  padding: 0 8rem;
+  // padding: 0 8rem;
   transition: background 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   
   @media screen and (max-width: 768px) {
-    padding: 0 0.5rem;
+    // padding: 0 0.5rem;
   }
   }
 
@@ -43,6 +47,4 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
+

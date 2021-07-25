@@ -6,6 +6,7 @@
   justify-content: space-between;
   margin-top: 0.5rem;
   overflow: hidden;
+  padding: 0 8rem;
 
   @media all and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
