@@ -13,7 +13,7 @@ const Projects = () => {
         ))}
       </div>
       <div className={projectStyles.discoverMore}>
-        <Button text='Discover More' backgroundColor={true} type={false} />
+        <Button text='Discover More' backgroundColor={true} submitting type={false} />
       </div>
     </div>
   );
