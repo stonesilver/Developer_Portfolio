@@ -7,9 +7,6 @@ const Skills = () => {
   return (
     <div id={skillsStyles.skills}>
       <SectionHeader text='Skills' info='My Arsenal of Skills' />
-      {/* <div className={skillsStyles.header}>
-        <span className={skillsStyles.text}>My Arsenal of Skills</span>
-      </div> */}
       <div className={skillsStyles.skillsRow}>
         {skillsArray.map(({ name, percentage, color }, index) => (
           <SkillCard

@@ -10,7 +10,7 @@ const ProjectCard = () => {
       </div>
       <div className={projectCardStyles.ProjectCardBody}>
         <span className={projectCardStyles.ProjectCardTitle}>
-          Movie DataBase Application
+          Movie Database Application
         </span>
       </div>
     </div>

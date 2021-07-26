@@ -13,20 +13,32 @@ $primaryColor: #060616;
     padding: 1rem 0;
     color: $fillColor;
 
+    @media screen and (max-width: 768px) {
+      grid-gap: 0;
+    }
+
     .text {
       width: max-content;
-      font-size: 1.1rem;
+      font-size: calc(1.1rem + 0.3vw);
       font-weight: 500;
     }
 
     .iconContainer {
       position: relative;
 
+      @media screen and (max-width: 768px) {
+        margin-left: 0.5rem;
+      }
+
       .arrow {
         position: absolute;
         left: 0;
         width: 40px;
         border-top: 2px solid;
+
+        @media screen and (max-width: 768px) {
+          width: 27px;
+        }
 
         &::after {
           content: '>';
