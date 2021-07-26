@@ -9,11 +9,16 @@ const Projects = () => {
       <SectionHeader text='Projects' info='Frontend Projects' />
       <div className={projectStyles.projectsContainer}>
         {[0, 1, 2, 3].map((item, index) => (
-          <ProjectCard key={index}/>
+          <ProjectCard key={index} />
         ))}
       </div>
       <div className={projectStyles.discoverMore}>
-        <Button text='Discover More' backgroundColor={true} submitting type={false} />
+        <Button
+          text='Discover More'
+          backgroundColor={true}
+          submitting
+          type={false}
+        />
       </div>
     </div>
   );
