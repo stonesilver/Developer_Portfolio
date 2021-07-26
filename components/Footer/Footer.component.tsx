@@ -37,7 +37,7 @@ const Footer = () => {
             <span>
               <FontAwesomeIcon icon={faEnvelope} />
             </span>
-            <Link href='#' className={footerStyles.info}>ezenwachigozie12@gmail.com</Link>
+            <div className={footerStyles.info}>ezenwachigozie12@gmail.com</div>
           </div>
         </div>
         <div className={footerStyles.footerLinks}>
