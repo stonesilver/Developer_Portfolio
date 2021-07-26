@@ -1,6 +1,6 @@
 import buttonStyles from './button.module.scss';
 
-const Button = ({ text, backgroundColor, type }) => {
+const Button = ({ text, backgroundColor, type, submitting }) => {
   return !type ? (
     <div
       className={`${buttonStyles.button} ${
@@ -10,7 +10,7 @@ const Button = ({ text, backgroundColor, type }) => {
       <div className={buttonStyles.text}>{text}</div>
     </div>
   ) : (
-    <input type='submit' value={text} id={buttonStyles.submit} />
+    <button type='submit' disabled={submitting} id={buttonStyles.submit}>{text} </button>
   );
 };
 

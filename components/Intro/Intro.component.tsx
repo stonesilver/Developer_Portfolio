@@ -22,8 +22,9 @@ const Intro = () => {
                 text={'DownLoad CV'}
                 backgroundColor={true}
                 type={false}
+                submitting
               />
-              <Button text={'Hire Me'} backgroundColor={false} type={false} />
+              <Button text={'Hire Me'} backgroundColor={false} type={false} submitting />
             </div>
           </div>
           <div className={introStyles.introImageContainer}>
