@@ -113,12 +113,17 @@
         height: 100%;
         padding: 0 0.2rem;
 
+        @media screen and (max-width: 768px) {
+          grid-gap: 0;
+        }
+
         .hambuger {
           position: relative;
           right: 0;
           width: 75%;
           border: 1px solid;
           transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          margin-bottom: .5rem;
 
           &:nth-child(2) {
             width: 100%;
