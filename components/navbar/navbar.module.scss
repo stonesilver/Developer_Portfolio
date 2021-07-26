@@ -145,13 +145,14 @@
         left: -200vh;
         min-height: 100vh;
         width: 100%;
-        background: rgba(148, 111, 111, 0.705);
+        background: rgba(138, 74, 74, 0.705);
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 80px);
         justify-content: center;
         grid-gap: 0.5rem;
         padding: 8rem 0;
-        transition: all 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        z-index: 5;
       }
 
       .link {

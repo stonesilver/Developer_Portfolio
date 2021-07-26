@@ -5,7 +5,7 @@ import navbarStyles from './navbar.module.scss';
 
 const NavBar = () => {
   const [checked, setChecked] = useState(false);
-  const [theme, setTheme] = useState(['white', 'black']);
+  const [theme, setTheme] = useState(['black', 'white']);
   const checkboxOnclick = () => {
     setChecked(!checked);
   };
