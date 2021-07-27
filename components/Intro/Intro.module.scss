@@ -101,9 +101,10 @@ $primaryColor: #060616;
           margin-top: 2.5rem;
 
           @media screen and (max-width: 768px) {
+            width: 70%;
             align-items: center;
-            justify-content: center;
-            grid-gap: 1rem;
+            justify-content: space-around;
+            grid-gap: 0;
           }
         }
 

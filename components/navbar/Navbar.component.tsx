@@ -21,12 +21,6 @@ const NavBar = () => {
   return (
     <nav className={navbarStyles.navbar}>
       <div className={navbarStyles.navbarLogoContainer}>
-        {/* <div className={navbarStyles.navbarLogo}>
-          <span className={navbarStyles.code}>&#60;</span>
-          <span className={navbarStyles.code}>ESC</span>
-          <span className={navbarStyles.code}>&#8725;</span>
-          <span className={navbarStyles.code}>&#62;</span>
-        </div> */}
         <Link href='/'>
           <span className={navbarStyles.name}>{'<ESC />'}</span>
         </Link>
