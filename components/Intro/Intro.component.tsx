@@ -8,46 +8,56 @@ import introStyles from './Intro.module.scss';
 const Intro = () => {
   return (
     <div className={introStyles.intro}>
-      <div className={introStyles.introContent}>
-        <div className={introStyles.introGrid}>
-          <div className={introStyles.introDetails}>
-            <p className={introStyles.hello}>Hello, I'm</p>
-            <p className={introStyles.name}>Ezenwa Chigozie</p>
-            <p className={introStyles.jobDescription}>
-              <span>{`<FrontendDeveloper affinity={React Js} />
+      <div className={introStyles.introContainter}>
+        <div className={introStyles.introContent}>
+          <div className={introStyles.introGrid}>
+            <div className={introStyles.introDetails}>
+              <p className={introStyles.hello}>Hello, I'm</p>
+              <p className={introStyles.name}>Ezenwa Chigozie</p>
+              <p className={introStyles.jobDescription}>
+                <span>{`<FrontendDeveloper affinity={ReactJs} />
           `}</span>
-            </p>
-            <div className={introStyles.cvHireMeBtn}>
-              <Button
-                text={'DownLoad CV'}
-                backgroundColor={true}
-                type={false}
-                submitting
+              </p>
+              <div className={introStyles.cvHireMeBtn}>
+                <Button
+                  text={'DownLoad CV'}
+                  backgroundColor={true}
+                  type={false}
+                  submitting
+                />
+                <Button
+                  text={'Hire Me'}
+                  backgroundColor={false}
+                  type={false}
+                  submitting
+                />
+              </div>
+            </div>
+            <div className={introStyles.introImageContainer}>
+              <img
+                src={Dev}
+                alt='developer'
+                className={introStyles.introImage}
               />
-              <Button text={'Hire Me'} backgroundColor={false} type={false} submitting />
             </div>
           </div>
-          <div className={introStyles.introImageContainer}>
-            {/* <Developer /> */}
-            <img src={Dev} alt='developer' className={introStyles.introImage} />
+          <div className={introStyles.scrollDown}>
+            <Scroll icon={faArrowDown} text='Scroll Down' reverse={false} />
           </div>
         </div>
-        <div className={introStyles.scrollDown}>
-          <Scroll icon={faArrowDown} text='Scroll Down' reverse={false} />
-        </div>
-      </div>
 
-      <div className={introStyles.introSocials}>
-        <div className={introStyles.arrow}></div>
-        <span className={introStyles.socialLinks}>
-          <Github />
-        </span>
-        <span className={introStyles.socialLinks}>
-          <Linkedin />
-        </span>
-        <span className={introStyles.socialLinks}>
-          <Twitter />
-        </span>
+        <div className={introStyles.introSocials}>
+          <div className={introStyles.arrow}></div>
+          <span className={introStyles.socialLinks}>
+            <Github />
+          </span>
+          <span className={introStyles.socialLinks}>
+            <Linkedin />
+          </span>
+          <span className={introStyles.socialLinks}>
+            <Twitter />
+          </span>
+        </div>
       </div>
     </div>
   );

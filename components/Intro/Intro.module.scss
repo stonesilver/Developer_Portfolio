@@ -2,241 +2,255 @@ $fillColor: #6c63ff;
 $primaryColor: #060616;
 
 .intro {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr 0.02fr;
   width: 100%;
   overflow: hidden;
-  margin-top: 3rem;
-  animation: intro 1.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-
-  @keyframes intro {
-    from {
-      top: 900px;
-    }
-    to {
-      top: 0;
-    }
-  }
-
-  .introContent {
+  .introContainter {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.02fr;
     width: 100%;
+    margin-top: 3rem;
+    animation: intro 1.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 
-    .introGrid {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 0.8fr 0.045fr;
-      grid-template-areas: 'intro image social';
-      grid-gap: 0.5rem;
-      overflow: hidden;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: auto;
+      justify-content: center;
+      margin-top: 1rem;
+    }
 
-      @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          'image'
-          'intro'
-          'social';
+    @keyframes intro {
+      from {
+        top: 900px;
       }
+      to {
+        top: 0;
+      }
+    }
 
-      .introDetails {
-        grid-area: intro;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 0 0.5rem;
+    .introContent {
+      width: 100%;
 
-        .hello {
-          font-size: 1.6rem;
-          font-weight: 500;
-          color: $fillColor;
-          letter-spacing: 1px;
-          animation: fade-in 2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-          animation-delay: 1.2s;
-        }
-
-        .name {
-          // font-size: 3rem;
-          font-size: calc(1.5rem + 1vw);
-          font-weight: 600;
-          letter-spacing: 1px;
-          width: max-content;
-          animation: fade-in 2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-          animation-delay: 1.2s;
-
-          @media screen and (max-width: 414px) {
-            // font-size: 2.2rem;
-          }
-
-          @media screen and (max-width: 320px) {
-            // font-size: 1.8rem;
-          }
-        }
-
-        .jobDescription {
-          font-size: calc(.95rem + 0.3vw);
-          opacity: 0.7;
-          animation: fade-in 2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-          animation-delay: 1.2s;
-
-          @media screen and (max-width: 414px) {
-            // font-size: 1.1rem;
-          }
-
-          @media screen and (max-width: 360px) {
-            // font-size: 1rem;
-          }
-
-          @media screen and (max-width: 280px) {
-            // font-size: 0.78rem;
-          }
-        }
-
-        .cvHireMeBtn {
-          display: flex;
-          grid-gap: 3rem;
-          margin-top: 2.5rem;
-
-          @media screen and (max-width: 768px) {
-            width: 70%;
-            align-items: center;
-            justify-content: space-around;
-            grid-gap: 0;
-          }
-        }
-
-        p {
-          margin: 0;
-          padding: 0;
-        }
+      .introGrid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 0.8fr 0.045fr;
+        grid-template-areas: 'intro image social';
+        grid-gap: 0.5rem;
+        overflow: hidden;
 
         @media screen and (max-width: 768px) {
-          align-items: center;
-          justify-content: center;
-          padding: 0.5rem 0;
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            'image'
+            'intro'
+            'social';
         }
 
-        @keyframes fade-in {
-          from {
-            opacity: 0;
+        .introDetails {
+          grid-area: intro;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 0.5rem;
+
+          .hello {
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: $fillColor;
+            letter-spacing: 1px;
+            animation: fade-in 2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+            animation-delay: 1.2s;
           }
-          to {
-            opacity: 1;
+
+          .name {
+            // font-size: 3rem;
+            font-size: calc(1.5rem + 1vw);
+            font-weight: 600;
+            letter-spacing: 1px;
+            width: max-content;
+            animation: fade-in 2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+            animation-delay: 1.2s;
+
+            @media screen and (max-width: 414px) {
+              // font-size: 2.2rem;
+            }
+
+            @media screen and (max-width: 320px) {
+              // font-size: 1.8rem;
+            }
+          }
+
+          .jobDescription {
+            font-size: calc(0.95rem + 0.3vw);
+            opacity: 0.7;
+            animation: fade-in 2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+            animation-delay: 1.2s;
+
+            @media screen and (max-width: 414px) {
+              // font-size: 1.1rem;
+            }
+
+            @media screen and (max-width: 360px) {
+              // font-size: 1rem;
+            }
+
+            @media screen and (max-width: 280px) {
+              // font-size: 0.78rem;
+            }
+          }
+
+          .cvHireMeBtn {
+            display: flex;
+            grid-gap: 3rem;
+            margin-top: 2.5rem;
+
+            @media screen and (max-width: 768px) {
+              width: 70%;
+              align-items: center;
+              justify-content: space-around;
+              grid-gap: 0;
+            }
+          }
+
+          p {
+            margin: 0;
+            padding: 0;
+          }
+
+          @media screen and (max-width: 768px) {
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0;
+          }
+
+          @keyframes fade-in {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
+          }
+        }
+
+        .introImageContainer {
+          grid-area: image;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 1rem;
+
+          .introImage {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px dotted $fillColor;
+
+            @media screen and (max-width: 540px) {
+              width: 90%;
+            }
           }
         }
       }
+      .scrollDown {
+        margin-top: 2rem;
+        margin-left: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
 
-      .introImageContainer {
-        grid-area: image;
+        @media screen and (max-width: 540px) {
+          margin-top: 0rem;
+        }
+      }
+    }
+
+    .introSocials {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 2rem;
+      }
+
+      .socialLinks {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 0 1rem;
+        width: 100%;
+        height: 1.4rem;
+        padding: 0.1rem 0;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
 
-        .introImage {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          border: 5px dotted $fillColor;
+        @media screen and (max-width: 768px) {
+          width: 25px;
+          height: 25px;
+          padding: 0 0.08rem;
         }
       }
-    }
-    .scrollDown {
-      margin-top: 2rem;
-      margin-left: 0.5rem;
-      display: flex;
-      justify-content: flex-start;
-    }
-  }
 
-  .introSocials {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    @media screen and (max-width: 768px) {
-      margin-top: 2rem;
-    }
-
-    .socialLinks {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      height: 1.4rem;
-      padding: 0.1rem 0;
-      background: rgb(255, 255, 255);
-      border-radius: 50%;
-
-      @media screen and (max-width: 768px) {
-        width: 25px;
-        height: 25px;
-        padding: 0 0.08rem;
-      }
-    }
-
-    .arrow {
-      position: absolute;
-      top: 0;
-      right: 0;
-      transform: translateX(-11px);
-      width: 1px;
-      height: 100%;
-      background: $primaryColor;
-      z-index: -1;
-
-      @media screen and (max-width: 768px) {
-        width: 100%;
-        height: 1px;
+      .arrow {
+        position: absolute;
         top: 0;
         right: 0;
-        transform: translateY(12px);
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: -5px;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-bottom: 5px solid;
+        transform: translateX(-11px);
+        width: 1px;
+        height: 100%;
+        background: $primaryColor;
+        z-index: -1;
 
         @media screen and (max-width: 768px) {
-          top: -2px;
-          right: -3px;
-          transform: rotate(90deg);
+          width: 100%;
+          height: 1px;
+          top: 0;
+          right: 0;
+          transform: translateY(12px);
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -5px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid;
+
+          @media screen and (max-width: 768px) {
+            top: -2px;
+            right: -3px;
+            transform: rotate(90deg);
+          }
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: -5px;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid;
+
+          @media screen and (max-width: 768px) {
+            bottom: -2px;
+            left: -3px;
+            transform: rotate(90deg);
+          }
         }
       }
 
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: -5px;
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 5px solid;
-
-        @media screen and (max-width: 768px) {
-          bottom: -2px;
-          left: -3px;
-          transform: rotate(90deg);
-        }
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
       }
-    }
-
-    @media screen and (max-width: 768px) {
-      flex-direction: row;
     }
   }
 }

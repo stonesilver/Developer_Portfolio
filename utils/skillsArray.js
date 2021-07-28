@@ -30,8 +30,8 @@ export const skillsArray = [
     color: '#AA0000',
   },
   {
-    name: 'Vue',
-    percentage: 60,
+    name: 'Googling',
+    percentage: 100,
     color: '#6c63ff',
   },
   {
