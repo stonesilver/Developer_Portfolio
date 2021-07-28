@@ -12,10 +12,12 @@ $white: #fff;
   border: 1px solid $fillColor;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   @media screen and (max-width: 768px) {
     padding: .8rem;
     font-size: .85rem;
+    border-radius: 6px;
   }
 
   &:hover {
@@ -28,6 +30,7 @@ $white: #fff;
 #submit {
   background: $fillColor;
   color: $white;
+  transition: all 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   &:hover {
     background: none;
