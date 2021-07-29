@@ -1,4 +1,4 @@
-import { Developer, Github, Linkedin, Twitter } from '../svgIcons/Icons';
+import { Github, Linkedin, Twitter } from '../svgIcons/Icons';
 import Scroll from '../Scroll/Scroll.component';
 import Button from '../button/Button.component';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
@@ -48,15 +48,30 @@ const Intro = () => {
 
         <div className={introStyles.introSocials}>
           <div className={introStyles.arrow}></div>
-          <span className={introStyles.socialLinks}>
+          <a
+            href='https://github.com/stonesilver'
+            rel='noreferrer'
+            target='_blank'
+            className={introStyles.socialLinks}
+          >
             <Github />
-          </span>
-          <span className={introStyles.socialLinks}>
+          </a>
+          <a
+            href='https://www.linkedin.com/in/chigozie-ezenwa-a82a7411a/'
+            rel='noreferrer'
+            target='_blank'
+            className={introStyles.socialLinks}
+          >
             <Linkedin />
-          </span>
-          <span className={introStyles.socialLinks}>
+          </a>
+          <a
+            href='https://twitter.com/sunnyside04'
+            rel='noreferrer'
+            target='_blank'
+            className={introStyles.socialLinks}
+          >
             <Twitter />
-          </span>
+          </a>
         </div>
       </div>
     </div>
