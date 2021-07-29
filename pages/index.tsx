@@ -13,7 +13,6 @@ export default function Home() {
         <title>Home - Ezenwa Chigozie</title>
         <meta name='description' content='Frontend Developer' />
         <link rel='icon' href='/favicon.ico' />
-        <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
       </Head>
 
       <main className={styles.main}>
