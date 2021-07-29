@@ -6,7 +6,7 @@ import React from 'react';
 
 const AboutMe = () => {
   return (
-    <div id={aboutMeStyles.aboutMe}>
+    <div className={aboutMeStyles.aboutMe} id='about'>
       <SectionHeader
         text='About Me'
         info={`Results-oriented Front-end Developer dedicated to creating and

@@ -5,7 +5,7 @@ import projectStyles from './Projects.module.scss';
 
 const Projects = () => {
   return (
-    <div className={projectStyles.project}>
+    <div className={projectStyles.project} id='projects'>
       <SectionHeader text='Projects' info='Frontend Projects' />
       <div className={projectStyles.projectsContainer}>
         {[0, 1, 2, 3].map((item, index) => (

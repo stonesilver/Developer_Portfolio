@@ -80,7 +80,7 @@ const Contact = () => {
       });
   };
   return (
-    <div className={contactStyles.contact}>
+    <div className={contactStyles.contact} id='contact'>
       <SectionHeader text='Contact' info='Send a message or make an inquire' />
       <div className={contactStyles.contentContainer}>
         <div className={contactStyles.formContainner}>
