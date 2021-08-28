@@ -5,6 +5,7 @@
   .projectsContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 3rem 2rem;
     margin-top: 1rem;
 

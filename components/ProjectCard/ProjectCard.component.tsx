@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import img from '../../movieDatabase.jpg';
+import Button from '../button/Button.component';
+import img from '../../public/images/test.png';
 import projectCardStyles from './ProjectCard.module.scss';
 
 const ProjectCard = () => {
@@ -9,9 +9,26 @@ const ProjectCard = () => {
         <img src={img} alt='project' />
       </div>
       <div className={projectCardStyles.ProjectCardBody}>
-        <span className={projectCardStyles.ProjectCardTitle}>
-          Movie Database Application
-        </span>
+        <p className={projectCardStyles.ProjectCardTitle}>
+          Movie Database App
+        </p>
+        <p className={projectCardStyles.ProjectCardDescription}>
+          This project is a fully responsive web application. The project uses TheMovieDB API to display movies/Tv series by genre, popular, upcoming, best rated etc. Users can also serach for movie, TV series or actors/actresses. It was built using React, SASS, bootstrap and  redux. 
+        </p>
+        <div className={projectCardStyles.btns}>
+        <Button
+          text='View Live'
+          backgroundColor={true}
+          submitting
+          type={false}
+        />
+        <Button
+          text='View Code'
+          backgroundColor={true}
+          submitting
+          type={false}
+        />
+        </div>
       </div>
     </div>
   );
