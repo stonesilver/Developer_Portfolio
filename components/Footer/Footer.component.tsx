@@ -9,7 +9,7 @@ import footerStyles from './Footer.module.scss';
 
 const Footer = () => {
   return (
-    <div className={footerStyles.footer}>
+    <div className={footerStyles.footer} id='footer'>
       <div className={footerStyles.footerContent}>
         <div className={footerStyles.logoContainer}>
           <span className={footerStyles.logo}>

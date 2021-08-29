@@ -7,7 +7,7 @@ import introStyles from './Intro.module.scss';
 
 const Intro = () => {
   return (
-    <div className={introStyles.intro}>
+    <div className={introStyles.intro} id='intro'>
       <div className={introStyles.introContainter}>
         <div className={introStyles.introContent}>
           <div className={introStyles.introGrid}>
