@@ -18,13 +18,13 @@ const ProjectCard = () => {
         <div className={projectCardStyles.btns}>
         <Button
           text='View Live'
-          backgroundColor={true}
+          backgroundColor={false}
           submitting
           type={false}
         />
         <Button
           text='View Code'
-          backgroundColor={true}
+          backgroundColor={false}
           submitting
           type={false}
         />

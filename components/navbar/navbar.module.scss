@@ -1,3 +1,5 @@
+$fillColor: #6c63ff;
+
 .navbar {
   position: sticky;
   top: 0;
@@ -6,15 +8,14 @@
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
   justify-content: space-between;
-  margin-top: 0.5rem;
   overflow: hidden;
   padding: 0 8rem;
   z-index: 5;
-  background-color: black;
+  background: $fillColor;
 
   @media all and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
   }
 
   .navbarLogoContainer {
