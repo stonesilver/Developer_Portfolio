@@ -8,6 +8,7 @@ $fillColor: #6c63ff;
   display: grid;
   grid-template-columns: 0.5fr 0.5fr;
   justify-content: space-between;
+  align-items: center;
   overflow: hidden;
   padding: 0 8rem;
   z-index: 5;
@@ -130,6 +131,10 @@ $fillColor: #6c63ff;
           border: 1px solid;
           transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
           margin-bottom: .5rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
 
           &:nth-child(2) {
             width: 100%;
