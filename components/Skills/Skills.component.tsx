@@ -8,13 +8,8 @@ const Skills = () => {
     <div className={skillsStyles.skills} id='skills'>
       <SectionHeader text='Skills' info='My Arsenal of Skills' />
       <div className={skillsStyles.skillsRow}>
-        {skillsArray.map(({ name, percentage, color }, index) => (
-          <SkillCard
-            key={index}
-            color={color}
-            name={name}
-            percentage={percentage}
-          />
+        {skillsArray.map(({ name, icon }, index) => (
+          <SkillCard key={index} icon={icon} name={name} />
         ))}
       </div>
     </div>

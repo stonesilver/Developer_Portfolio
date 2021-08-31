@@ -1,62 +1,59 @@
+import {
+  faDatabase, faAtom
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faHtml5, faCss3Alt, faSass, faJs, faReact, faGoogle, faNodeJs, faGithub, 
+} from '@fortawesome/free-brands-svg-icons';
+
 export const skillsArray = [
   {
     name: 'HTML',
-    percentage: 95,
-    color: '#AA00AA',
-  },
-  {
-    name: 'CSS',
-    percentage: 90,
-    color: '#AA0000',
+    icon: faHtml5,
   },
   {
     name: 'SASS',
-    percentage: 90,
-    color: '#6c63ff',
+    icon: faSass,
+  },
+  {
+    name: 'CSS',
+    icon: faCss3Alt,
   },
   {
     name: 'Javascrript',
-    percentage: 85,
-    color: '#e72bb8',
+    icon: faJs,
   },
   {
     name: 'ReactJs',
-    percentage: 92,
-    color: '#AA00AA',
-  },
-  {
-    name: 'NextJs',
-    percentage: 90,
-    color: '#AA0000',
+    icon: faReact,
   },
   {
     name: 'Googling',
-    percentage: 100,
-    color: '#6c63ff',
+    icon: faGoogle,
   },
   {
-    name: 'Redux',
-    percentage: 95,
-    color: '#e72bb8',
-  },
-  {
-    name: 'Express',
-    percentage: 75,
-    color: '#AA00AA',
-  },
-  {
-    name: 'MongoDb',
-    percentage: 85,
-    color: '#AA0000',
+    name: 'NextJs',
+    icon: faReact,
   },
   {
     name: 'PostgreSQL',
-    percentage: 80,
-    color: '#6c63ff',
+    icon: faDatabase,
   },
   {
+    name: 'Redux',
+    icon: faAtom,
+  },
+  
+  {
+    name: 'Express',
+    icon: faNodeJs,
+  },
+  {
+    name: 'MongoDb',
+    icon: faDatabase,
+  },
+  
+  {
     name: 'Git',
-    percentage: 80,
-    color: '#e72bb8',
+    icon: faGithub,
   },
 ];

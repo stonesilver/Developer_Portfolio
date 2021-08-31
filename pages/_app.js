@@ -1,4 +1,4 @@
-import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import Layout from '../components/Layout/Layout.component';
 import NavBar from '../components/navbar/Navbar.component';

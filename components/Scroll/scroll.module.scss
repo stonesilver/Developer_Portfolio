@@ -11,9 +11,13 @@
   }
 
   .iconContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 5rem;
     height: 5rem;
     padding: 1.2rem;
+    font-size: 2.5rem;
     border-radius: 50%;
     box-shadow: 0px 0px 7px rgba(82, 47, 47, 0.507),
       inset 0px 0px 7px rgba(83, 81, 81, 0.507);
