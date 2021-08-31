@@ -4,7 +4,7 @@ import skillStyles from './SkillCard.module.scss';
 const SkillCard = ({ icon, name }) => {
   return (
     <div className={skillStyles.skillCard}>
-      <div className={skillStyles.circular}>
+      <div className={skillStyles.icon}>
         <FontAwesomeIcon icon={icon} />
       </div>
       <div className={skillStyles.cardBody}>
