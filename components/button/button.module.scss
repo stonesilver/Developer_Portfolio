@@ -21,6 +21,7 @@ $white: #fff;
 
   &:hover {
     background: $fillColor;
-    color: $fillColor;
+    color: $white;
+    border: 1px solid $fillColor;
   }
 }
