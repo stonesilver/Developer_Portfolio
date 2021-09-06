@@ -8,32 +8,19 @@ $white: #fff;
   font-size: 1.1rem;
   font-weight: 500;
   outline: none;
-  color: $fillColor;
-  border: 1px solid $fillColor;
-  border-radius: 10px;
+  border: 1px solid;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
   cursor: pointer;
   transition: background 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 
   @media screen and (max-width: 768px) {
     padding: .8rem;
     font-size: .85rem;
-    border-radius: 6px;
   }
 
   &:hover {
     background: $fillColor;
     color: $white;
-  }
-}
-
-.backgroundColor,
-#submit {
-  background: $fillColor;
-  color: $white;
-  transition: background 2.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  &:hover {
-    background: none;
-    color: $fillColor;
   }
 }
