@@ -4,7 +4,7 @@ import projectCardStyles from './ProjectCard.module.scss';
 
 const ProjectCard = () => {
   return (
-    <div className={projectCardStyles.ProjectCard}>
+    <div className={projectCardStyles.ProjectCard} data-aos='fade-left'>
       <div className={projectCardStyles.ProjectCardImgContainter}>
         <img src={img} alt='project' />
       </div>
