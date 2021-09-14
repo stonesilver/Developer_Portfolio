@@ -1,7 +1,7 @@
 import { Github, Linkedin, Twitter } from '../svgIcons/Icons';
-import Scroll from '../Scroll/Scroll.component';
+// import Scroll from '../Scroll/Scroll.component';
 import Button from '../button/Button.component';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+// import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import Dev from '../../public/images/dev.png';
 import introStyles from './Intro.module.scss';
 
@@ -41,9 +41,9 @@ const Intro = () => {
               />
             </div>
           </div>
-          <div className={introStyles.scrollDown}>
+          {/* <div className={introStyles.scrollDown}>
             <Scroll icon={faArrowDown} text='Scroll Down' reverse={false} />
-          </div>
+          </div> */}
         </div>
 
         <div className={introStyles.introSocials}>

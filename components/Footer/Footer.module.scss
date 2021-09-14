@@ -1,7 +1,8 @@
 $fillColor: #6c63ff;
 
 .footer {
-  width: 100%;background-position: 50% 50%;
+  width: 100%;
+  background-position: 50% 50%;
   background-size: cover;
   padding: 2rem 1rem;
   transition: background 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -13,10 +14,10 @@ $fillColor: #6c63ff;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-template-areas: 
-      'logoContainer'
-      'footerLinks' 
-      'footerContact' ;
+      grid-template-areas:
+        'logoContainer'
+        'footerLinks'
+        'footerContact';
       row-gap: 1rem;
     }
 

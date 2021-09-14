@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Dark, Light } from '../svgIcons/Icons';
 import navbarStyles from './navbar.module.scss';
 
 const NavBar = () => {
@@ -73,7 +72,8 @@ const NavBar = () => {
               onClick={changeTheme}
             />
             <div className={navbarStyles.themeToggle}>
-              <Light /> <Dark />
+              <span className={navbarStyles.modeIcon}>🌞</span>
+              <span className={navbarStyles.modeIcon}>🌜</span>
             </div>
           </li>
         </ul>

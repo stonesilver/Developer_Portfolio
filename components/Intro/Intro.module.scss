@@ -3,7 +3,8 @@ $primaryColor: #060616;
 
 .intro {
   width: 100%;
-  overflow: hidden;background-size: cover;
+  overflow: hidden;
+  background-size: cover;
   background-position: 50% 50%;
   transition: background 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
@@ -12,13 +13,17 @@ $primaryColor: #060616;
     display: grid;
     grid-template-columns: 1fr 0.02fr;
     width: 100%;
+    min-height: 80vh;
     margin-top: 3rem;
     animation: intro 1.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    padding: 3rem;
+    // border: 1px solid gray;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: auto;
       justify-content: center;
       margin-top: 3rem;
+      padding: 0;
     }
 
     @keyframes intro {
