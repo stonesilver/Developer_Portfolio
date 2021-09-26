@@ -46,6 +46,7 @@ $fillColor: #6c63ff;
     @media screen and (max-width: 768px) {
       display: grid;
       grid-template-columns: repeat(2, auto);
+      padding-right: 0.5em;
     }
 
     #mobileToggle {
