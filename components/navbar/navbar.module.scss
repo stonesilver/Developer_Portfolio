@@ -3,6 +3,7 @@ $fillColor: #6c63ff;
 .navbar {
   position: sticky;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: grid;
@@ -13,6 +14,7 @@ $fillColor: #6c63ff;
   padding: 0 8rem;
   z-index: 5;
   background: $fillColor;
+  box-shadow: 0 1.5px 5px gray;
 
   @media all and (max-width: 768px) {
     grid-template-columns: 1fr 1fr;
@@ -41,6 +43,11 @@ $fillColor: #6c63ff;
     justify-content: flex-end;
     align-items: center;
 
+    @media screen and (max-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+    }
+
     #mobileToggle {
       position: absolute;
       top: 0;
@@ -52,6 +59,7 @@ $fillColor: #6c63ff;
       z-index: 10;
       opacity: 0;
       cursor: pointer;
+
       @media screen and (max-width: 768px) {
         &:checked ~ .navLinks {
           opacity: 1;
@@ -85,8 +93,6 @@ $fillColor: #6c63ff;
 
       @media all and (max-width: 768px) {
         display: block;
-        // position: fixed;
-        // z-index: 7;
       }
 
       .hamburgerContainer {
@@ -186,64 +192,68 @@ $fillColor: #6c63ff;
           }
         }
       }
+    }
 
-      .theme {
+    .theme {
+      grid-area: 1/1;
+      position: relative;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+
+      @media screen and (max-width: 768px) {
+        margin-right: 1em;
+      }
+
+      #themeToggle {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 13;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked ~ .themeToggle::after {
+          right: 2px;
+        }
+      }
+
+      .themeToggle {
         position: relative;
         display: flex;
-        list-style: none;
-        width: 100%;
-        justify-content: center;
+        justify-content: space-between;
+        padding: 0 0.5em;
+        align-items: center;
+        width: 4rem;
+        height: 2rem;
+        box-shadow: 0 0 2px black;
+        border-radius: 20px;
+        overflow: hidden;
+        background: rgb(32, 32, 32);
+        transition: background 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        transition-delay: 0.1s;
 
-        #themeToggle {
-          position: absolute;
-          top: 0;
-          right: 0;
-          width: 100%;
-          height: 100%;
-          padding: 0;
-          margin: 0;
-          z-index: 13;
-          opacity: 0;
-          cursor: pointer;
-
-          &:checked ~ .themeToggle::after {
-            right: 2px;
-          }
+        .modeIcon {
+          font-size: 1.05rem;
         }
 
-        .themeToggle {
-          position: relative;
-          display: flex;
-          justify-content: space-between;
-          padding: 0 0.5em;
-          align-items: center;
-          width: 4rem;
-          height: 2rem;
-          box-shadow: 0 0 2px black;
-          border-radius: 20px;
-          overflow: hidden;
-          background: rgb(32, 32, 32);
-          transition: background 0.1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-          transition-delay: 0.1s;
-
-          .modeIcon {
-            font-size: 1.05rem;
-          }
-
-          &::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: calc(50% + 2px);
-            width: calc(50% - 4px);
-            height: calc(100% - 4px);
-            border-radius: 50%;
-            background: rgb(43, 40, 40);
-            transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-            box-shadow: 0px 0px 2px rgb(0, 0, 0), inset 0 1.5px 2px black,
-              inset 0 -1.5px 2px black;
-            margin: 2px 0;
-          }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: calc(50% + 2px);
+          width: calc(50% - 4px);
+          height: calc(100% - 4px);
+          border-radius: 50%;
+          background: rgb(43, 40, 40);
+          transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          box-shadow: 0px 0px 2px rgb(0, 0, 0), inset 0 1.5px 2px black,
+            inset 0 -1.5px 2px black;
+          margin: 2px 0;
         }
       }
     }

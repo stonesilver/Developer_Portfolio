@@ -62,21 +62,22 @@ const NavBar = () => {
           <li className={navbarStyles.link}>
             <a href='#contact'>Contact</a>
           </li>
-          <li className={navbarStyles.theme}>
-            <input
-              type='checkbox'
-              name='themeToggle'
-              checked={checked}
-              onChange={checkboxOnclick}
-              id={navbarStyles.themeToggle}
-              onClick={changeTheme}
-            />
-            <div className={navbarStyles.themeToggle}>
-              <span className={navbarStyles.modeIcon}>🌞</span>
-              <span className={navbarStyles.modeIcon}>🌜</span>
-            </div>
-          </li>
         </ul>
+
+        <div className={navbarStyles.theme}>
+          <input
+            type='checkbox'
+            name='themeToggle'
+            checked={checked}
+            onChange={checkboxOnclick}
+            id={navbarStyles.themeToggle}
+            onClick={changeTheme}
+          />
+          <div className={navbarStyles.themeToggle}>
+            <span className={navbarStyles.modeIcon}>🌞</span>
+            <span className={navbarStyles.modeIcon}>🌜</span>
+          </div>
+        </div>
       </div>
     </nav>
   );

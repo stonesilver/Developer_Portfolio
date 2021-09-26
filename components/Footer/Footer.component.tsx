@@ -58,7 +58,7 @@ const Footer = () => {
       <hr />
       <div className={footerStyles.createdBy}>
         <span className={footerStyles.text}>
-          Developed by <span>Ezenwa Chigozie</span>
+         👨‍ Developed by <span>Ezenwa Chigozie</span>
         </span>
       </div>
     </div>
