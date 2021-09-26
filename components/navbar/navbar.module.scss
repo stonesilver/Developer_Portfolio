@@ -172,6 +172,7 @@ $fillColor: #6c63ff;
         a {
           position: relative;
           display: block;
+          cursor: pointer;
 
           &::after {
             content: '';

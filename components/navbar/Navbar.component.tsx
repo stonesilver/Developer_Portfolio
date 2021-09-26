@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 import { darkBackground, lightBackground } from '../../utils/background';
 import navbarStyles from './navbar.module.scss';
 
@@ -44,7 +45,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className={navbarStyles.navbar}>
+    <nav className={navbarStyles.navbar} id='home'>
       <div className={navbarStyles.navbarLogoContainer}>
         <Link href='/'>
           <span className={navbarStyles.name}>{'<ESC />'}</span>
@@ -67,24 +68,44 @@ const NavBar = () => {
         </div>
         <ul className={navbarStyles.navLinks}>
           <li className={navbarStyles.link}>
-            <a href='#about' onClick={closeHamburgerMenu}>
+            <ScrollLink
+              to='about'
+              smooth={true}
+              duration={600}
+              onClick={closeHamburgerMenu}
+            >
               About
-            </a>
+            </ScrollLink>
           </li>
           <li className={navbarStyles.link}>
-            <a href='#skills' onClick={closeHamburgerMenu}>
+            <ScrollLink
+              to='skills'
+              smooth={true}
+              duration={600}
+              onClick={closeHamburgerMenu}
+            >
               Skills
-            </a>
+            </ScrollLink>
           </li>
           <li className={navbarStyles.link}>
-            <a href='#projects' onClick={closeHamburgerMenu}>
+            <ScrollLink
+              to='projects'
+              smooth={true}
+              duration={600}
+              onClick={closeHamburgerMenu}
+            >
               Projects
-            </a>
+            </ScrollLink>
           </li>
           <li className={navbarStyles.link}>
-            <a href='#contact' onClick={closeHamburgerMenu}>
+            <ScrollLink
+              to='contact'
+              smooth={true}
+              duration={600}
+              onClick={closeHamburgerMenu}
+            >
               Contact
-            </a>
+            </ScrollLink>
           </li>
         </ul>
 

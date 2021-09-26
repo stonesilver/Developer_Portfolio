@@ -1,4 +1,5 @@
-import Link from 'next/link';
+// import Link from 'next/link';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import {
   faPhoneAlt,
   faMapMarker,
@@ -12,8 +13,11 @@ const Footer = () => {
     <div className={footerStyles.footer} id='footer'>
       <div className={footerStyles.footerContent}>
         <div className={footerStyles.logoContainer}>
-          <span className={footerStyles.logo}>
-            <Link href='/'>{`<ESC/>`}</Link>
+          <span
+            className={footerStyles.logo}
+            onClick={() => scroll.scrollToTop()}
+          >
+            {`<ESC/>`}
           </span>
         </div>
         <div className={footerStyles.footerContact}>
@@ -41,16 +45,24 @@ const Footer = () => {
         <div className={footerStyles.footerLinks}>
           <ul className={footerStyles.footerLinksContainer}>
             <li className={footerStyles.footerLink}>
-              <a href='#about'>About</a>
+              <Link to='about' smooth={true} duration={600}>
+                About
+              </Link>
             </li>
             <li className={footerStyles.footerLink}>
-              <a href='#skills'>Skills</a>
+              <Link to='skills' smooth={true} duration={600}>
+                Skills
+              </Link>
             </li>
             <li className={footerStyles.footerLink}>
-              <a href='#projects'>Projects</a>
+              <Link to='projects' smooth={true} duration={600}>
+                Projects
+              </Link>
             </li>
             <li className={footerStyles.footerLink}>
-              <a href='#contact'>Contact</a>
+              <Link to='contact' smooth={true} duration={600}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>
@@ -58,7 +70,7 @@ const Footer = () => {
       <hr />
       <div className={footerStyles.createdBy}>
         <span className={footerStyles.text}>
-         👨‍ Developed by <span>Ezenwa Chigozie</span>
+          👨‍ Developed by <span>Ezenwa Chigozie</span>
         </span>
       </div>
     </div>

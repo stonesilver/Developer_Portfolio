@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { animateScroll as scroll } from 'react-scroll';
 import scrollStyles from './scroll.module.scss';
 
 const Scroll = ({ icon, text, reverse }) => {
@@ -11,7 +12,7 @@ const Scroll = ({ icon, text, reverse }) => {
       </style>
       <div
         className={scrollStyles.iconContainer}
-        onClick={() => window.scrollTo(0, 0)}
+        onClick={() => scroll.scrollToTop()}
       >
         <FontAwesomeIcon icon={icon} />
       </div>
