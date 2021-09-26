@@ -1,18 +1,30 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { darkBackground, lightBackground } from '../../utils/background';
 import navbarStyles from './navbar.module.scss';
 
 const NavBar = () => {
-  const darkBackgroundImage = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg fill-opacity='0.43'%3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23060606' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%230c0c0c' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23111111' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23151515' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23181818' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E")`;
-  const lightBackgroundImage = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23FFFFFF' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23f8f8f8' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%23f0f0f0' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23e9e9e9' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23e2e2e2' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%23DBDBDB' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E")`;
+  const darkBackgroundImage = darkBackground;
+  const lightBackgroundImage = lightBackground;
   const [checked, setChecked] = useState(false);
+  const [mobileChecked, setMobileChecked] = useState(false);
   const [theme, setTheme] = useState(['black', 'white']);
   const [introFooterBackground, setIntroFooterBackground] = useState(
     darkBackgroundImage
   );
-  const checkboxOnclick = () => {
+
+  const themeCheckBoxOnChange = () => {
     setChecked(!checked);
   };
+
+  const mobileToggleCheckBoxOnChange = () => {
+    setMobileChecked(!mobileChecked);
+  };
+
+  const closeHamburgerMenu = () => {
+    window.innerWidth < 768 ? setMobileChecked(false) : '';
+  };
+
   useEffect(() => {
     document.body.style.background = theme[0];
     document.body.style.color = theme[1];
@@ -21,6 +33,7 @@ const NavBar = () => {
     intro.style.backgroundImage = introFooterBackground;
     footer.style.backgroundImage = introFooterBackground;
   }, [theme]);
+
   const changeTheme = () => {
     theme[0] === 'white'
       ? setTheme(['black', 'white'])
@@ -29,6 +42,7 @@ const NavBar = () => {
       ? setIntroFooterBackground(darkBackgroundImage)
       : setIntroFooterBackground(lightBackgroundImage);
   };
+
   return (
     <nav className={navbarStyles.navbar}>
       <div className={navbarStyles.navbarLogoContainer}>
@@ -40,6 +54,8 @@ const NavBar = () => {
         <input
           type='checkbox'
           name='mobileToggle'
+          checked={mobileChecked}
+          onChange={mobileToggleCheckBoxOnChange}
           id={navbarStyles.mobileToggle}
         />
         <div className={navbarStyles.mobileToggle}>
@@ -51,16 +67,24 @@ const NavBar = () => {
         </div>
         <ul className={navbarStyles.navLinks}>
           <li className={navbarStyles.link}>
-            <a href='#about'>About</a>
+            <a href='#about' onClick={closeHamburgerMenu}>
+              About
+            </a>
           </li>
           <li className={navbarStyles.link}>
-            <a href='#skills'>Skills</a>
+            <a href='#skills' onClick={closeHamburgerMenu}>
+              Skills
+            </a>
           </li>
           <li className={navbarStyles.link}>
-            <a href='#projects'>Projects</a>
+            <a href='#projects' onClick={closeHamburgerMenu}>
+              Projects
+            </a>
           </li>
           <li className={navbarStyles.link}>
-            <a href='#contact'>Contact</a>
+            <a href='#contact' onClick={closeHamburgerMenu}>
+              Contact
+            </a>
           </li>
         </ul>
 
@@ -69,7 +93,7 @@ const NavBar = () => {
             type='checkbox'
             name='themeToggle'
             checked={checked}
-            onChange={checkboxOnclick}
+            onChange={themeCheckBoxOnChange}
             id={navbarStyles.themeToggle}
             onClick={changeTheme}
           />

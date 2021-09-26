@@ -73,13 +73,13 @@ $fillColor: #6c63ff;
 
         &:checked ~ .mobileToggle .hamburgerContainer .hambuger:first-child {
           transform: rotate(45deg) translateY(8px) translateX(5px);
-          color: red;
+          color: #ff0000;
           width: 100%;
         }
 
         &:checked ~ .mobileToggle .hamburgerContainer .hambuger:last-child {
           transform: rotate(-45deg) translateY(-8px) translateX(5px);
-          color: red;
+          color: #ff0000;
           width: 100%;
         }
       }
@@ -150,7 +150,7 @@ $fillColor: #6c63ff;
         left: -200vh;
         height: 100vh;
         width: 100%;
-        background: rgba(69, 117, 179, 0.877);
+        background: #4575b3e0;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 80px);
         align-content: center;
@@ -172,7 +172,6 @@ $fillColor: #6c63ff;
         a {
           position: relative;
           display: block;
-          width: max-content;
 
           &::after {
             content: '';
@@ -184,6 +183,10 @@ $fillColor: #6c63ff;
             border-radius: 2px;
             background: blueviolet;
             transition: width 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+            @media screen and (max-width: 768px) {
+              all: unset;
+            }
           }
 
           &:hover {
