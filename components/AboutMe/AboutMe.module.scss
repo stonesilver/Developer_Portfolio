@@ -11,6 +11,10 @@ $fillColor: #6c63ff;
     height: auto;
   }
 
+  @media screen and (max-width: 1024px) {
+    height: auto;
+  }
+
   .aboutMeContent {
     display: flex;
     flex-direction: column;

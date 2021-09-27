@@ -17,13 +17,16 @@ $primaryColor: #060616;
     margin-top: 3rem;
     animation: intro 1.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     padding: 3rem;
-    // border: 1px solid gray;
 
     @media screen and (max-width: 768px) {
       grid-template-columns: auto;
       justify-content: center;
       margin-top: 3rem;
       padding: 0;
+    }
+
+    @media screen and (max-width: 1024px) {
+      min-height: auto;
     }
 
     @keyframes intro {

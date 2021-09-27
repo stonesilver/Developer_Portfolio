@@ -1,6 +1,7 @@
 import SectionHeader from '../SectionHeader/SectionHeader.component';
 import Button from '../button/Button.component';
 import ProjectCard from '../ProjectCard/ProjectCard.component';
+import { projects } from '../../utils/projectData';
 import projectStyles from './Projects.module.scss';
 
 const Projects = () => {
@@ -8,8 +9,13 @@ const Projects = () => {
     <div className={projectStyles.project} id='projects'>
       <SectionHeader text='Projects' info='Frontend Projects' />
       <div className={projectStyles.projectsContainer}>
-        {[0, 1, 2, 3].map((item, index) => (
-          <ProjectCard key={index} />
+        {projects.map(({ id, name, image, description }) => (
+          <ProjectCard
+            key={id}
+            name={name}
+            image={image}
+            description={description}
+          />
         ))}
       </div>
       <div className={projectStyles.discoverMore}>

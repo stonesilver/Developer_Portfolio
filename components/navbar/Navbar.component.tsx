@@ -23,7 +23,11 @@ const NavBar = () => {
   };
 
   const closeHamburgerMenu = () => {
-    window.innerWidth < 768 ? setMobileChecked(false) : '';
+    window.innerWidth <= 768 ? setMobileChecked(false) : '';
+  };
+
+  const duration = () => {
+    return window.innerWidth <= 768 ? 1000 : 600;
   };
 
   useEffect(() => {
@@ -71,7 +75,7 @@ const NavBar = () => {
             <ScrollLink
               to='about'
               smooth={true}
-              duration={600}
+              duration={duration}
               onClick={closeHamburgerMenu}
             >
               About
@@ -81,7 +85,7 @@ const NavBar = () => {
             <ScrollLink
               to='skills'
               smooth={true}
-              duration={600}
+              duration={duration}
               onClick={closeHamburgerMenu}
             >
               Skills
@@ -91,7 +95,7 @@ const NavBar = () => {
             <ScrollLink
               to='projects'
               smooth={true}
-              duration={600}
+              duration={duration}
               onClick={closeHamburgerMenu}
             >
               Projects
@@ -101,7 +105,7 @@ const NavBar = () => {
             <ScrollLink
               to='contact'
               smooth={true}
-              duration={600}
+              duration={duration}
               onClick={closeHamburgerMenu}
             >
               Contact

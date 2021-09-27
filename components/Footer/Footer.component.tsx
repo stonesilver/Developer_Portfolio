@@ -9,6 +9,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import footerStyles from './Footer.module.scss';
 
 const Footer = () => {
+  const duration = () => {
+    return window.innerWidth <= 768 ? 1000 : 600;
+  };
+
   return (
     <div className={footerStyles.footer} id='footer'>
       <div className={footerStyles.footerContent}>
@@ -45,22 +49,22 @@ const Footer = () => {
         <div className={footerStyles.footerLinks}>
           <ul className={footerStyles.footerLinksContainer}>
             <li className={footerStyles.footerLink}>
-              <Link to='about' smooth={true} duration={600}>
+              <Link to='about' smooth={true} duration={duration}>
                 About
               </Link>
             </li>
             <li className={footerStyles.footerLink}>
-              <Link to='skills' smooth={true} duration={600}>
+              <Link to='skills' smooth={true} duration={duration}>
                 Skills
               </Link>
             </li>
             <li className={footerStyles.footerLink}>
-              <Link to='projects' smooth={true} duration={600}>
+              <Link to='projects' smooth={true} duration={duration}>
                 Projects
               </Link>
             </li>
             <li className={footerStyles.footerLink}>
-              <Link to='contact' smooth={true} duration={600}>
+              <Link to='contact' smooth={true} duration={duration}>
                 Contact
               </Link>
             </li>
