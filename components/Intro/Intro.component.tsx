@@ -30,6 +30,8 @@ const Intro = () => {
                   backgroundColor={false}
                   type={false}
                   submitting
+                  liveLink={''}
+                  githubLink={''}
                 />
               </div>
             </div>

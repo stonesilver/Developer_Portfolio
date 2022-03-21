@@ -9,14 +9,18 @@ const Projects = () => {
     <div className={projectStyles.project} id='projects'>
       <SectionHeader text='Projects' info='Frontend Projects' />
       <div className={projectStyles.projectsContainer}>
-        {projects.map(({ id, name, image, description }) => (
-          <ProjectCard
-            key={id}
-            name={name}
-            image={image}
-            description={description}
-          />
-        ))}
+        {projects.map(
+          ({ id, name, image, description, live_link, github_link }) => (
+            <ProjectCard
+              key={id}
+              name={name}
+              image={image}
+              description={description}
+              liveLink={live_link}
+              githubLink={github_link}
+            />
+          )
+        )}
       </div>
       <div className={projectStyles.discoverMore}>
         <Button

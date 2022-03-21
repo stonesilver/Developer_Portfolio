@@ -1,6 +1,7 @@
 import Img1 from '../public/images/movieDataBase.png';
 import Img2 from '../public/images/commitViewer.png';
 import Img3 from '../public/images/portfolio.png';
+import Img4 from '../public/images/coronation.png';
 
 export const projects = [
   {
@@ -32,8 +33,8 @@ export const projects = [
   },
   {
     id: 4,
-    name: 'Commit viewer',
-    image: Img2,
+    name: 'Coronation',
+    image: Img4,
     description:
       'Explore open source projects from GitHub, and read their commit history to see the story of how they were built. This project uses github API to display commits on a repository. It was built using React, SASS and  axios for API calls.',
     live_link: 'https://commitviewer12.netlify.app/',

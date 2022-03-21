@@ -29,7 +29,12 @@ const AboutMe = () => {
             Debug<span className={aboutMeStyles.dot}>.</span>
           </span>
         </div>
-        <Button text='Contact Me' submitting backgroundColor={true} type={false} />
+        <Button
+          text='Contact Me'
+          submitting
+          backgroundColor={true}
+          type={false}
+        />
       </section>
     </div>
   );

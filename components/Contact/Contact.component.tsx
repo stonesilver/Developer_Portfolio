@@ -8,10 +8,14 @@ import axios from 'axios';
 import contactStyles from './Contact.module.scss';
 
 const Contact = () => {
-  const [status, setStatus] = useState({
+  const [status, setStatus] = useState<{
+    submitted: boolean,
+    submitting: boolean,
+    info: { error: boolean, msg: null | string},
+  }>({
     submitted: false,
     submitting: false,
-    info: { error: false, msg: null },
+    info: { error: false, msg: null},
   });
   const [inputs, setInputs] = useState({
     name: '',
@@ -20,7 +24,7 @@ const Contact = () => {
   });
 
   // handle server response when submit button is clicked
-  const handleServerResponse = (ok, msg) => {
+  const handleServerResponse = (ok: boolean, msg: string) => {
     if (ok) {
       setStatus({
         submitted: true,
@@ -41,7 +45,7 @@ const Contact = () => {
   };
 
   // handles form input change
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: any) => {
     e.persist();
     setInputs((prev) => ({
       ...prev,
@@ -55,7 +59,7 @@ const Contact = () => {
   };
 
   // handles the post action when the form is clicked
-  const handleOnSubmit = (e) => {
+  const handleOnSubmit = (e: any) => {
     e.preventDefault();
     setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
     axios({

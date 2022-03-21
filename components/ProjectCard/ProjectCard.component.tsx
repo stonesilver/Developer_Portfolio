@@ -1,10 +1,17 @@
 import Button from '../button/Button.component';
-// import img from '../../public/images/movieDataBase.png';
 import projectCardStyles from './ProjectCard.module.scss';
 
-const ProjectCard = ({name, image, description}) => {
+interface projectCardProps {
+  name: string;
+   image: string;
+   description: string;
+   githubLink: string;
+   liveLink: string;
+}
+
+const ProjectCard = ({name, image, description, githubLink, liveLink}: projectCardProps) => {
   return (
-    <div className={projectCardStyles.ProjectCard} data-aos='fade-left'>
+    <div className={projectCardStyles.ProjectCard} data-aos='flip-up'>
       <div className={projectCardStyles.ProjectCardImgContainter}>
         <img src={image} alt='project' />
       </div>
@@ -19,12 +26,16 @@ const ProjectCard = ({name, image, description}) => {
             backgroundColor={false}
             submitting
             type={false}
+            githubLink={''}
+            liveLink={liveLink}
           />
           <Button
             text='View Code'
             backgroundColor={false}
             submitting
             type={false}
+            githubLink={githubLink}
+            liveLink={''}
           />
         </div>
       </div>

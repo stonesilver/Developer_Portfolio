@@ -1,8 +1,15 @@
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { animateScroll as scroll } from 'react-scroll';
 import scrollStyles from './scroll.module.scss';
 
-const Scroll = ({ icon, text, reverse }) => {
+interface scrollProps {
+  icon: IconDefinition;
+   text: string;
+   reverse: boolean;
+}
+
+const Scroll = ({ icon, text, reverse }: scrollProps) => {
   return (
     <div className={scrollStyles.scroll}>
       <style jsx>
