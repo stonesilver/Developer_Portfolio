@@ -36,8 +36,8 @@ export const projects = [
     name: 'Coronation',
     image: Img4,
     description:
-      'Explore open source projects from GitHub, and read their commit history to see the story of how they were built. This project uses github API to display commits on a repository. It was built using React, SASS and  axios for API calls.',
-    live_link: 'https://commitviewer12.netlify.app/',
-    github_link: 'https://github.com/stonesilver/Bossbus-commit-viewer',
+      'A clone of Anka website with a little tweak to the original design. It was built using React, Redux, SASS and Rtk Query for API calls.',
+    live_link: '',
+    github_link: 'https://github.com/stonesilver/Royal-Prints',
   },
 ];
