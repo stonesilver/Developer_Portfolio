@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 import { darkBackground, lightBackground } from '../../utils/background';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import navbarStyles from './navbar.module.scss';
 
 const NavBar = () => {
@@ -28,6 +29,8 @@ const NavBar = () => {
   const duration = () => {
     return window.innerWidth <= 768 ? 1000 : 600;
   };
+
+  const isMobile = useMediaQuery(768);
 
   useEffect(() => {
     document.body.style.background = theme[0];
