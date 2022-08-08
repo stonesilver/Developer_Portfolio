@@ -3,7 +3,7 @@ import SectionHeader from '../SectionHeader/SectionHeader.component';
 import Button from '../button/Button.component';
 import Scroll from '../Scroll/Scroll.component';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import contactImg from '../../public/images/contact-me.jpg';
+import contactImg from '../../public/images/contact-me.webp';
 import axios from 'axios';
 import contactStyles from './Contact.module.scss';
 

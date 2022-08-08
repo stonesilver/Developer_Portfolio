@@ -1,7 +1,7 @@
-import Img1 from '../public/images/movieDataBase.png';
-import Img2 from '../public/images/commitViewer.png';
-import Img3 from '../public/images/portfolio.png';
-import Img4 from '../public/images/coronation.png';
+import Img1 from '../public/images/movieDataBase.webp';
+import Img2 from '../public/images/commitViewer.webp';
+import Img3 from '../public/images/portfolio.webp';
+import Img4 from '../public/images/coronation.webp';
 
 export const projects = [
   {

@@ -1,4 +1,3 @@
-// import { IconDefinition, IconLookup, findIconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import skillStyles from './SkillCard.module.scss';
