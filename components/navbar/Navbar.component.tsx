@@ -10,9 +10,8 @@ const NavBar = () => {
   const [checked, setChecked] = useState(false);
   const [mobileChecked, setMobileChecked] = useState(false);
   const [theme, setTheme] = useState(['black', 'white']);
-  const [introFooterBackground, setIntroFooterBackground] = useState(
-    darkBackgroundImage
-  );
+  const [introFooterBackground, setIntroFooterBackground] =
+    useState(darkBackgroundImage);
 
   const themeCheckBoxOnChange = () => {
     setChecked(!checked);
@@ -35,8 +34,8 @@ const NavBar = () => {
     document.body.style.color = theme[1];
     const intro = document.getElementById('intro');
     const footer = document.getElementById('footer');
-    intro.style.backgroundImage = introFooterBackground;
-    footer.style.backgroundImage = introFooterBackground;
+    intro!.style.backgroundImage = introFooterBackground;
+    footer!.style.backgroundImage = introFooterBackground;
   }, [theme]);
 
   const changeTheme = () => {
