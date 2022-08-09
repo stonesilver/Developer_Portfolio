@@ -1,4 +1,5 @@
 @import '../../scss/variables';
+@import '../../scss/media-query-mixins';
 
 .sectionHeader {
   width: 100%;
@@ -42,26 +43,22 @@
         &::after {
           content: '>';
           position: absolute;
-          top: -20px;
+          top: -17px;
           right: -5px;
           font-size: 1.6rem;
-          font-weight: 500;
+          font-weight: 600;
         }
       }
     }
   }
 
   .info {
-    font-size: clamp(1.05rem, 1.5vw, 2rem);
+    font-size: 0.875rem;
     font-weight: 500;
-    // margin-top: 0rem;
+    line-height: 27px;
 
-    // @media screen and (max-width: 765px) {
-    //   font-size: 1.2rem;
-    // }
-
-    // @media screen and (max-height: 640px) {
-    //   font-size: 0.85rem;
-    // }
+    @include sm {
+      font-size: 1.25rem;
+    }
   }
 }

@@ -27,13 +27,14 @@
     grid-template-columns: auto;
     justify-content: center;
     width: 100%;
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 2rem;
     animation: intro 1.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 
     @include sm {
       grid-template-columns: 1fr max-content;
       margin-top: 3rem;
+      gap: 1rem;
     }
 
     @include lg {
@@ -59,17 +60,19 @@
         grid-template-areas:
           'image'
           'intro';
-        grid-gap: 0.5rem;
+        grid-gap: 2.5rem;
         overflow: hidden;
 
         @include sm {
           grid-template-columns: 1fr 0.9fr;
           grid-template-areas: 'intro image';
+          grid-gap: 0.5rem;
         }
 
         @include lg {
           grid-template-columns: 1fr 0.7fr;
           grid-template-areas: 'intro image';
+          grid-gap: 0.5rem;
         }
 
         .introDetails {
@@ -169,6 +172,9 @@
             position: relative;
             width: 100%;
             height: 100%;
+            border-radius: 50%;
+            border: 5px dotted $fillColor;
+            overflow: hidden;
 
             @include lg {
               width: 90%;
@@ -177,9 +183,7 @@
           }
 
           .introImage {
-            border-radius: 50%;
             object-fit: contain;
-            border: 5px dotted $fillColor;
           }
         }
       }
