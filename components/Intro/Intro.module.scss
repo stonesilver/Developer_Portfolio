@@ -144,6 +144,7 @@
         }
 
         .introImageContainer {
+          position: relative;
           grid-area: image;
           display: flex;
           justify-content: center;

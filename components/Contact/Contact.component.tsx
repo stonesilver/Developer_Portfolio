@@ -3,8 +3,8 @@ import SectionHeader from '../SectionHeader/SectionHeader.component';
 import Button from '../button/Button.component';
 import Scroll from '../Scroll/Scroll.component';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import contactImg from '../../public/images/contact-me.webp';
 import axios from 'axios';
+import Image from 'next/image'
 import contactStyles from './Contact.module.scss';
 
 const Contact = () => {
@@ -137,10 +137,11 @@ const Contact = () => {
         </div>
         <div className={contactStyles.imageContainer}>
           {/* <Contacts /> */}
-          <img
-            src={contactImg}
+          <Image
+            src='/images/contact-me.webp'
             alt='contactMe'
             className={contactStyles.image}
+            layout="fill"
           />
         </div>
       </div>

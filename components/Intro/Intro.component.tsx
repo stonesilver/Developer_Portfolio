@@ -1,6 +1,6 @@
 import { Github, Linkedin, Twitter } from '../svgIcons/Icons';
 import Button from '../button/Button.component';
-import Dev from '../../public/images/dev.webp';
+import Image from 'next/image';
 import introStyles from './Intro.module.scss';
 
 const Intro = () => {
@@ -34,10 +34,11 @@ const Intro = () => {
               </div>
             </div>
             <div className={introStyles.introImageContainer}>
-              <img
-                src={Dev}
+              <Image
+                src='/images/dev.webp'
                 alt='developer'
                 className={introStyles.introImage}
+                layout='fill'
               />
             </div>
           </div>

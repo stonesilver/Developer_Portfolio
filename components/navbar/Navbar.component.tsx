@@ -14,6 +14,8 @@ const NavBar = () => {
   const [introFooterBackground, setIntroFooterBackground] =
     useState(darkBackgroundImage);
 
+    const isMobile = useMediaQuery(768);
+
   const themeCheckBoxOnChange = () => {
     setChecked(!checked);
   };
@@ -29,8 +31,6 @@ const NavBar = () => {
   const duration = () => {
     return window.innerWidth <= 768 ? 1000 : 600;
   };
-
-  const isMobile = useMediaQuery(768);
 
   useEffect(() => {
     document.body.style.background = theme[0];
