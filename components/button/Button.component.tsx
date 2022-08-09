@@ -18,7 +18,8 @@ const Button = ({
   liveLink,
 }: buttonProps) => {
   const openLinkInNewtab = () => {
-    githubLink || (liveLink && window.open(githubLink || liveLink, '_blank'));
+    (githubLink || liveLink) && window.open(githubLink || liveLink, '_blank');
+    // githubLink || (liveLink && window.open(githubLink || liveLink, '_blank'));
   };
 
   return !type ? (
@@ -33,7 +34,7 @@ const Button = ({
     </div>
   ) : (
     <button type='submit' disabled={submitting} id={buttonStyles.submit}>
-      {text}{' '}
+      {text}
     </button>
   );
 };

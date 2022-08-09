@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Github, Linkedin, Twitter } from '../svgIcons/Icons';
+import { socials } from '../../utils/socials';
 import Button from '../button/Button.component';
 import Image from 'next/image';
 import introStyles from './Intro.module.scss';
@@ -70,30 +70,17 @@ const Intro = () => {
 
         <div className={introStyles.introSocials}>
           <div className={introStyles.arrow}></div>
-          <a
-            href='https://github.com/stonesilver'
-            rel='noreferrer'
-            target='_blank'
-            className={introStyles.socialLinks}
-          >
-            <Github />
-          </a>
-          <a
-            href='https://www.linkedin.com/in/chigozie-ezenwa-a82a7411a/'
-            rel='noreferrer'
-            target='_blank'
-            className={introStyles.socialLinks}
-          >
-            <Linkedin />
-          </a>
-          <a
-            href='https://twitter.com/sunnyside04'
-            rel='noreferrer'
-            target='_blank'
-            className={introStyles.socialLinks}
-          >
-            <Twitter />
-          </a>
+          {socials.map(({ href, icon }) => (
+            <a
+              key={href}
+              href={href}
+              rel='noreferrer'
+              target='_blank'
+              className={introStyles.socialLinks}
+            >
+              {icon}
+            </a>
+          ))}
         </div>
       </div>
     </div>

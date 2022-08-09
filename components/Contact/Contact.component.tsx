@@ -4,18 +4,20 @@ import Button from '../button/Button.component';
 import Scroll from '../Scroll/Scroll.component';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
-import Image from 'next/image'
+import Image from 'next/image';
 import contactStyles from './Contact.module.scss';
 
+interface State {
+  submitted: boolean;
+  submitting: boolean;
+  info: { error: boolean; msg: null | string };
+}
+
 const Contact = () => {
-  const [status, setStatus] = useState<{
-    submitted: boolean,
-    submitting: boolean,
-    info: { error: boolean, msg: null | string},
-  }>({
+  const [status, setStatus] = useState<State>({
     submitted: false,
     submitting: false,
-    info: { error: false, msg: null},
+    info: { error: false, msg: null },
   });
   const [inputs, setInputs] = useState({
     name: '',
@@ -74,12 +76,12 @@ const Contact = () => {
         );
       })
       .catch((error) => {
-        setStatus(prevState => ({
+        setStatus((prevState) => ({
           ...prevState,
           submitted: false,
           submitting: false,
         }));
-        console.log(error)
+        console.log(error);
         handleServerResponse(false, 'An error occurred. Please try again.');
       });
   };
@@ -141,7 +143,7 @@ const Contact = () => {
             src='/images/contact-me.webp'
             alt='contactMe'
             className={contactStyles.image}
-            layout="fill"
+            layout='fill'
           />
         </div>
       </div>

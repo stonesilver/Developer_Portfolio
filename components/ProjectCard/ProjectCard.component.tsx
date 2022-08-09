@@ -20,7 +20,7 @@ const ProjectCard = ({
   return (
     <div className={projectCardStyles.ProjectCard} data-aos='flip-up'>
       <div className={projectCardStyles.ProjectCardImgContainter}>
-        <Image src={image} alt='project' layout="fill" />
+        <Image src={image} alt='project' layout='fill' />
       </div>
       <div className={projectCardStyles.ProjectCardBody}>
         <p className={projectCardStyles.ProjectCardTitle}>{name}</p>
@@ -33,7 +33,6 @@ const ProjectCard = ({
             backgroundColor={false}
             submitting
             type={false}
-            githubLink={''}
             liveLink={liveLink}
           />
           <Button
@@ -42,7 +41,6 @@ const ProjectCard = ({
             submitting
             type={false}
             githubLink={githubLink}
-            liveLink={''}
           />
         </div>
       </div>
