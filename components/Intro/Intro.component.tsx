@@ -1,9 +1,27 @@
+import { useState, useEffect, useRef } from 'react';
 import { Github, Linkedin, Twitter } from '../svgIcons/Icons';
 import Button from '../button/Button.component';
 import Image from 'next/image';
 import introStyles from './Intro.module.scss';
 
 const Intro = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [imageHeight, setImageHeight] = useState(0);
+
+  useEffect(() => {
+    setImageHeight(ref.current!.clientWidth);
+
+    window.addEventListener('resize', () => {
+      setImageHeight(ref.current!.clientWidth);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setImageHeight(ref.current!.clientWidth);
+      });
+    };
+  }, [imageHeight]);
+
   return (
     <div className={introStyles.intro} id='intro'>
       <div className={introStyles.introContainter}>
@@ -33,7 +51,11 @@ const Intro = () => {
                 />
               </div>
             </div>
-            <div className={introStyles.introImageContainer}>
+            <div
+              ref={ref}
+              className={introStyles.introImageContainer}
+              style={{ height: imageHeight }}
+            >
               <Image
                 src='/images/dev.webp'
                 alt='developer'
