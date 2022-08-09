@@ -1,19 +1,26 @@
 import Button from '../button/Button.component';
 import projectCardStyles from './ProjectCard.module.scss';
+import Image from 'next/image';
 
 interface projectCardProps {
   name: string;
-   image: string;
-   description: string;
-   githubLink: string;
-   liveLink: string;
+  image: string;
+  description: string;
+  githubLink: string;
+  liveLink: string;
 }
 
-const ProjectCard = ({name, image, description, githubLink, liveLink}: projectCardProps) => {
+const ProjectCard = ({
+  name,
+  image,
+  description,
+  githubLink,
+  liveLink,
+}: projectCardProps) => {
   return (
     <div className={projectCardStyles.ProjectCard} data-aos='flip-up'>
       <div className={projectCardStyles.ProjectCardImgContainter}>
-        <img src={image} alt='project' />
+        <Image src={image} alt='project' layout="fill" />
       </div>
       <div className={projectCardStyles.ProjectCardBody}>
         <p className={projectCardStyles.ProjectCardTitle}>{name}</p>

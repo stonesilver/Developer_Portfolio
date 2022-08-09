@@ -1,13 +1,8 @@
-import Img1 from '../public/images/movieDataBase.webp';
-import Img2 from '../public/images/commitViewer.webp';
-import Img3 from '../public/images/portfolio.webp';
-import Img4 from '../public/images/coronation.webp';
-
 export const projects = [
   {
     id: 1,
     name: 'Movie Database',
-    image: Img1,
+    image: '/images/movieDataBase.webp',
     description:
       'This project is a fully responsive web application. This project uses TheMovieDB API to display movies/Tv series by genre, popular, upcoming, best rated etc. Users can also serach for movie, TV series or actors/actresses. It was built using React, SASS, bootstrap and redux.',
     live_link: 'https://moviedatabase12.netlify.app/',
@@ -16,7 +11,7 @@ export const projects = [
   {
     id: 2,
     name: 'Commit Viewer',
-    image: Img2,
+    image: '/images/commitViewer.webp',
     description:
       'Explore open source projects from GitHub, and read their commit history to see the story of how they were built. This project uses github API to display commits on a repository. It was built using React, SASS and  axios for API calls.',
     live_link: 'https://commitviewer12.netlify.app/',
@@ -25,7 +20,7 @@ export const projects = [
   {
     id: 3,
     name: 'Portfolio',
-    image: Img3,
+    image: '/images/portfolio.webp',
     description:
       'This project is a fully responsive web application. This project uses TheMovieDB API to display movies/Tv series by genre, popular, upcoming, best rated etc. Users can also serach for movie, TV series or actors/actresses. It was built using React, SASS, bootstrap and redux.',
     live_link: 'https://chigozie-ezenwa.vercel.app/',
@@ -34,7 +29,7 @@ export const projects = [
   {
     id: 4,
     name: 'Coronation',
-    image: Img4,
+    image: '/images/coronation.webp',
     description:
       'A clone of Anka website with a little tweak to the original design. It was built using React, Redux, SASS and Rtk Query for API calls.',
     live_link: '',

@@ -1,9 +1,27 @@
+import { useState, useEffect, useRef } from 'react';
 import { Github, Linkedin, Twitter } from '../svgIcons/Icons';
 import Button from '../button/Button.component';
-import Dev from '../../public/images/dev.webp';
+import Image from 'next/image';
 import introStyles from './Intro.module.scss';
 
 const Intro = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [imageHeight, setImageHeight] = useState(0);
+
+  useEffect(() => {
+    setImageHeight(ref.current!.clientWidth);
+
+    window.addEventListener('resize', () => {
+      setImageHeight(ref.current!.clientWidth);
+    });
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        setImageHeight(ref.current!.clientWidth);
+      });
+    };
+  }, [imageHeight]);
+
   return (
     <div className={introStyles.intro} id='intro'>
       <div className={introStyles.introContainter}>
@@ -13,37 +31,41 @@ const Intro = () => {
               <p className={introStyles.hello}>Hello, I'm</p>
               <p className={introStyles.name}>Ezenwa Chigozie</p>
               <p className={introStyles.jobDescription}>
-                <span>{`<FrontendDeveloper affinity={ReactJs} />
-          `}</span>
+                {`<FrontendDeveloper />`}
               </p>
               <div className={introStyles.cvHireMeBtn}>
                 <Button
-                  text={'DownLoad CV'}
+                  text='DownLoad CV'
                   backgroundColor={true}
                   type={false}
                   submitting
                 />
                 <Button
-                  text={'Hire Me'}
+                  text='Hire Me'
                   backgroundColor={false}
                   type={false}
                   submitting
-                  liveLink={''}
-                  githubLink={''}
+                  liveLink=''
+                  githubLink=''
                 />
               </div>
             </div>
-            <div className={introStyles.introImageContainer}>
-              <img
-                src={Dev}
-                alt='developer'
-                className={introStyles.introImage}
-              />
+            <div
+              ref={ref}
+              className={introStyles.developerImg}
+              style={{ height: imageHeight }}
+            >
+              <div className={introStyles.imgContainer}>
+                <Image
+                  src='/images/dev.webp'
+                  alt='developer'
+                  className={introStyles.introImage}
+                  layout='fill'
+                  priority
+                />
+              </div>
             </div>
           </div>
-          {/* <div className={introStyles.scrollDown}>
-            <Scroll icon={faArrowDown} text='Scroll Down' reverse={false} />
-          </div> */}
         </div>
 
         <div className={introStyles.introSocials}>

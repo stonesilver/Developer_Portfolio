@@ -1,3 +1,5 @@
+@import '../../scss/media-query-mixins';
+
 .ProjectCard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -18,15 +20,20 @@
   }
 
   .ProjectCardImgContainter {
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: 12.5rem;
     overflow: hidden;
+
+    @include sm {
+      height: 100%;
+    }
 
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      transition: .5s ease-in;
+      // object-fit: contain;
+      transition: 0.5s ease-in;
 
       &:hover {
         transform: scale(1.02);
