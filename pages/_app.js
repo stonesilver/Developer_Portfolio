@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
       duration: 500,
       mirror: true,
       offset: 30,
-      easing: 'ease-in-cubic'
+      easing: 'ease-in-cubic',
     });
   }, []);
   return (
