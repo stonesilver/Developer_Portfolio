@@ -31,42 +31,41 @@ const Intro = () => {
               <p className={introStyles.hello}>Hello, I'm</p>
               <p className={introStyles.name}>Ezenwa Chigozie</p>
               <p className={introStyles.jobDescription}>
-                <span>{`<FrontendDeveloper affinity={ReactJs} />
-          `}</span>
+                {`<FrontendDeveloper />`}
               </p>
               <div className={introStyles.cvHireMeBtn}>
                 <Button
-                  text={'DownLoad CV'}
+                  text='DownLoad CV'
                   backgroundColor={true}
                   type={false}
                   submitting
                 />
                 <Button
-                  text={'Hire Me'}
+                  text='Hire Me'
                   backgroundColor={false}
                   type={false}
                   submitting
-                  liveLink={''}
-                  githubLink={''}
+                  liveLink=''
+                  githubLink=''
                 />
               </div>
             </div>
             <div
               ref={ref}
-              className={introStyles.introImageContainer}
+              className={introStyles.developerImg}
               style={{ height: imageHeight }}
             >
-              <Image
-                src='/images/dev.webp'
-                alt='developer'
-                className={introStyles.introImage}
-                layout='fill'
-              />
+              <div className={introStyles.imgContainer}>
+                <Image
+                  src='/images/dev.webp'
+                  alt='developer'
+                  className={introStyles.introImage}
+                  layout='fill'
+                  priority
+                />
+              </div>
             </div>
           </div>
-          {/* <div className={introStyles.scrollDown}>
-            <Scroll icon={faArrowDown} text='Scroll Down' reverse={false} />
-          </div> */}
         </div>
 
         <div className={introStyles.introSocials}>

@@ -1,11 +1,17 @@
-.main {
-  padding: 0 8rem;
+@import '../scss/media-query-mixins';
 
-  @media screen and (max-width: 768px) {
-    padding: 0 0.5rem;
+.main {
+  padding: 0 1rem;
+
+  @include sm {
+    padding: 0 2rem;
   }
 
-  @media screen and (max-width: 1024px) {
-    padding: 0 1rem;
+  @include md {
+    padding: 0 3rem;
+  }
+
+  @include lg {
+    padding: 0 8rem;
   }
 }
