@@ -1,23 +1,9 @@
-// import Link from 'next/link';
-import { Link, animateScroll as scroll } from 'react-scroll';
-import {
-  faPhoneAlt,
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
+import { animateScroll as scroll } from 'react-scroll';
 import footerStyles from './Footer.module.scss';
-
-const footerContact = [
-  { src: '/svg/mail.svg', type: 'mailto:' },
-  { src: '/svg/phone.svg', type: 'tel' },
-  ,
-  { src: '/svg/whatsapp.svg', type: null },
-];
+import { footerContact } from '../../utils/footerContact';
 
 const Footer = () => {
-  const duration = () => {
-    return window.innerWidth <= 768 ? 1000 : 600;
-  };
-
   return (
     <div className={footerStyles.footer} id='footer'>
       <div className={footerStyles.footerContent}>
@@ -30,59 +16,28 @@ const Footer = () => {
           </span>
         </div>
         <div className={footerStyles.footerContact}>
-          {[0, 1, 2].map((item) => (
+          {footerContact.map(({ svgSrc, text, href }) => (
             <a
-              key={item}
-              href='tel:07064378577'
+              key={text}
+              href={href}
+              target='_blank'
               className={footerStyles.footerContactInfo}
             >
-              <span className={footerStyles.footerIcon}>
-                <FontAwesomeIcon icon={faPhoneAlt} />
-              </span>
+              <div className={footerStyles.footerIcon}>
+                <Image src={svgSrc} layout='fill' alt={text} />
+              </div>
 
-              <span className={footerStyles.contactLabel}>
-                +234 0706 437 8577
-              </span>
+              <p className={footerStyles.contactLabel}>{text}</p>
             </a>
           ))}
-          {/* <div className={footerStyles.footerContactInfo}>
-            <span>
-              <FontAwesomeIcon icon={faMapMarker} />
-            </span>
-
-            <span className='info'>Lagos, Nigeria</span>
-          </div>
-          <div className={footerStyles.footerContactInfo}>
-            <span>
-              <FontAwesomeIcon icon={faEnvelope} />
-            </span>
-            <span className={footerStyles.info}>
-              ezenwachigozie12@gmail.com
-            </span>
-          </div> */}
         </div>
         <div className={footerStyles.footerLinks}>
           <ul className={footerStyles.footerLinksContainer}>
-            <li className={footerStyles.footerLink}>
-              <Link to='about' smooth={true} duration={duration}>
-                About
-              </Link>
-            </li>
-            <li className={footerStyles.footerLink}>
-              <Link to='skills' smooth={true} duration={duration}>
-                Skills
-              </Link>
-            </li>
-            <li className={footerStyles.footerLink}>
-              <Link to='projects' smooth={true} duration={duration}>
-                Projects
-              </Link>
-            </li>
-            <li className={footerStyles.footerLink}>
-              <Link to='contact' smooth={true} duration={duration}>
-                Contact
-              </Link>
-            </li>
+            <li className={footerStyles.footerLink}>Create.</li>
+            <li className={footerStyles.footerLink}>Design.</li>
+            <li className={footerStyles.footerLink}>Code.</li>
+            <li className={footerStyles.footerLink}>Build.</li>
+            <li className={footerStyles.footerLink}>For everyone</li>
           </ul>
         </div>
       </div>

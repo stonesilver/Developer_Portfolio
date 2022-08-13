@@ -1,8 +1,5 @@
 import SectionHeader from '../SectionHeader/SectionHeader.component';
-import Button from '../button/Button.component';
 import aboutMeStyles from './AboutMe.module.scss';
-
-import React from 'react';
 
 const AboutMe = () => {
   return (
@@ -29,12 +26,6 @@ const AboutMe = () => {
             Debug<span className={aboutMeStyles.dot}>.</span>
           </span>
         </div>
-        <Button
-          text='Contact Me'
-          submitting
-          backgroundColor={true}
-          type={false}
-        />
       </section>
     </div>
   );

@@ -1,4 +1,5 @@
 @import '../../scss/variables';
+@import '../../scss/media-query-mixins';
 
 .footer {
   width: 100%;
@@ -7,18 +8,22 @@
   padding: 2rem 1rem;
   transition: background 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
+  @include sm {
+    padding: 0;
+  }
+
   .footerContent {
     display: grid;
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-    grid-template-areas: 'logoContainer footerContact footerLinks';
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'logoContainer'
+      'footerLinks'
+      'footerContact';
+    row-gap: 1rem;
 
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        'logoContainer'
-        'footerLinks'
-        'footerContact';
-      row-gap: 1rem;
+    @include sm {
+      grid-template-columns: 0.3fr 1fr 0.7fr;
+      grid-template-areas: 'logoContainer footerContact footerLinks';
     }
 
     .logoContainer {
@@ -43,54 +48,72 @@
     .footerContact {
       grid-area: footerContact;
       display: grid;
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 1.2rem;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
+      margin-top: 1rem;
 
-      @media screen and (max-width: 768px) {
-        justify-content: flex-start;
-        margin-top: 1rem;
+      @include sm {
+        justify-content: center;
+        margin-top: 0;
       }
 
       .footerContactInfo {
         display: flex;
-        width: 100%;
-        border: 1px solid red;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
 
-        span {
-          display: flex;
-          align-items: center;
-          width: 18px;
-          height: auto;
+        &:hover .contactLabel {
+          color: $fillColor;
         }
 
         .footerIcon {
-          // flex: 1;
-        }
-
-        .contactLabel {
-          flex: 1;
+          position: relative;
+          width: 1.875rem;
+          height: 1.875rem;
         }
       }
     }
 
     .footerLinks {
       grid-area: footerLinks;
-      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      @include sm {
+        justify-content: center;
+      }
 
       .footerLinksContainer {
         display: flex;
         flex-direction: column;
         list-style: none;
-        grid-gap: 0.5rem;
-        font-size: calc(1.05rem + 1vw);
+        font-size: 2rem;
         font-weight: 600;
         padding: 0;
 
-        .footerLink:hover {
-          color: $fillColor;
-          width: max-content;
-          cursor: pointer;
+        @include sm {
+          font-size: 2.2rem;
+        }
+
+        .footerLink {
+          &:first-child {
+            color: #16ac16;
+          }
+
+          &:nth-child(2) {
+            color: #f8f807;
+          }
+
+          &:nth-child(3) {
+            color: #f81010;
+          }
+
+          &:nth-child(4) {
+            color: #0b0bf5;
+          }
         }
       }
     }
@@ -99,6 +122,6 @@
   .createdBy {
     display: flex;
     justify-content: center;
-    font-size: calc(0.3rem + 0.8vw);
+    font-size: 0.75rem;
   }
 }

@@ -158,7 +158,9 @@
         left: -200vh;
         height: 100vh;
         width: 100%;
-        background-color: #4575b3e0;
+        background-color: #171718f1;
+        color: #eeeaea;
+        // grid-template-columns: repeat(2, 1fr);
         grid-template-columns: 1fr;
         grid-template-rows: repeat(5, 80px);
         align-content: center;

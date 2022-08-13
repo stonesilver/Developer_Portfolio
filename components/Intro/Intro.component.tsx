@@ -2,11 +2,18 @@ import { useState, useEffect, useRef } from 'react';
 import { socials } from '../../utils/socials';
 import Button from '../button/Button.component';
 import Image from 'next/image';
+import { Link as ScrollLink } from 'react-scroll';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import introStyles from './Intro.module.scss';
 
 const Intro = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [imageHeight, setImageHeight] = useState(0);
+  const isMobile = useMediaQuery(600);
+
+  const duration = () => {
+    return isMobile ? 1000 : 600;
+  };
 
   useEffect(() => {
     setImageHeight(ref.current!.clientWidth);
@@ -41,13 +48,15 @@ const Intro = () => {
                   submitting
                   liveLink='https://drive.google.com/file/d/1Y5G9I4T9LKvQug2PNkTU2Z2AlYBRdUe0/view?usp=drivesdk'
                 />
-                <Button
-                  text='Hire Me'
-                  backgroundColor={false}
-                  type={false}
-                  submitting
-                  githubLink=''
-                />
+                <ScrollLink to='contact' smooth={true} duration={duration}>
+                  <Button
+                    text='Hire Me'
+                    backgroundColor={false}
+                    type={false}
+                    submitting
+                    githubLink=''
+                  />
+                </ScrollLink>
               </div>
             </div>
             <div

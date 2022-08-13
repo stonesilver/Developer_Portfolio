@@ -14,7 +14,7 @@ const NavBar = () => {
   const [introFooterBackground, setIntroFooterBackground] =
     useState(darkBackgroundImage);
 
-    const isMobile = useMediaQuery(768);
+  const isMobile = useMediaQuery(600);
 
   const themeCheckBoxOnChange = () => {
     setChecked(!checked);
@@ -25,11 +25,11 @@ const NavBar = () => {
   };
 
   const closeHamburgerMenu = () => {
-    window.innerWidth <= 768 ? setMobileChecked(false) : '';
+    isMobile ? setMobileChecked(false) : '';
   };
 
   const duration = () => {
-    return window.innerWidth <= 768 ? 1000 : 600;
+    return isMobile ? 1000 : 600;
   };
 
   useEffect(() => {
@@ -40,6 +40,12 @@ const NavBar = () => {
     intro!.style.backgroundImage = introFooterBackground;
     footer!.style.backgroundImage = introFooterBackground;
   }, [theme]);
+
+  useEffect(() => {
+    mobileChecked
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'auto');
+  }, [mobileChecked]);
 
   const changeTheme = () => {
     theme[0] === 'white'

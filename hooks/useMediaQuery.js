@@ -4,6 +4,8 @@ export const useMediaQuery = (mediaQuery) => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
+    setWidth(window.innerWidth);
+
     const handleEvent = () => {
       setWidth(window.innerWidth);
     };
