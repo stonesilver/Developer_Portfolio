@@ -1,10 +1,17 @@
-import { Github, Linkedin, Twitter } from '../components/svgIcons/Icons';
-
 export const socials = [
-  { href: 'https://github.com/stonesilver', icon: <Github /> },
   {
-    href: 'https://www.linkedin.com/in/chigozie-ezenwa-a82a7411a/',
-    icon: <Linkedin />,
+    name: 'github',
+    href: 'https://github.com/stonesilver',
+    icon: '/svg/github.svg',
   },
-  { href: 'https://twitter.com/sunnyside04', icon: <Twitter /> },
+  {
+    name: 'linkedin',
+    href: 'https://www.linkedin.com/in/chigozie-ezenwa-a82a7411a/',
+    icon: '/svg/linkedin.svg',
+  },
+  {
+    name: 'twitter',
+    href: 'https://twitter.com/sunnyside04',
+    icon: '/svg/twitter.svg',
+  },
 ];

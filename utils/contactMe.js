@@ -1,11 +1,11 @@
-export const footerContact = [
+export const contactMe = [
   {
     svgSrc: '/svg/mail.svg',
     text: 'Email',
     href: 'mailto:ezenwachigozie12@gmail.com',
   },
   { svgSrc: '/svg/phone.svg', text: 'Call', href: 'tel:07064378577' },
-  ,
+
   {
     svgSrc: '/svg/whatsapp.svg',
     text: 'Whatsapp',

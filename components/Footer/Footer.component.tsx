@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { animateScroll as scroll } from 'react-scroll';
 import footerStyles from './Footer.module.scss';
-import { footerContact } from '../../utils/footerContact';
+import { contactMe } from '../../utils/contactMe';
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
           </span>
         </div>
         <div className={footerStyles.footerContact}>
-          {footerContact.map(({ svgSrc, text, href }) => (
+          {contactMe.map(({ svgSrc, text, href }) => (
             <a
               key={text}
               href={href}

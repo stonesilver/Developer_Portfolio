@@ -29,7 +29,6 @@ const Button = ({
       onClick={openLinkInNewtab}
     >
       {text}
-      {/* <div className={buttonStyles.text}>{text}</div> */}
     </div>
   ) : (
     <button type='submit' disabled={submitting} id={buttonStyles.submit}>

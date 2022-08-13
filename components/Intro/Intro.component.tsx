@@ -16,10 +16,10 @@ const Intro = () => {
   };
 
   useEffect(() => {
-    setImageHeight(ref.current!.clientWidth);
+    setImageHeight(ref?.current!?.clientWidth);
 
     window.addEventListener('resize', () => {
-      setImageHeight(ref.current!.clientWidth);
+      setImageHeight(ref?.current!?.clientWidth);
     });
 
     return () => {
@@ -79,7 +79,7 @@ const Intro = () => {
 
         <div className={introStyles.introSocials}>
           <div className={introStyles.arrow}></div>
-          {socials.map(({ href, icon }) => (
+          {socials.map(({ name, href, icon }) => (
             <a
               key={href}
               href={href}
@@ -87,7 +87,7 @@ const Intro = () => {
               target='_blank'
               className={introStyles.socialLinks}
             >
-              {icon}
+              <Image src={icon} alt={name} layout='fill' />
             </a>
           ))}
         </div>

@@ -14,7 +14,7 @@ const NavBar = () => {
   const [introFooterBackground, setIntroFooterBackground] =
     useState(darkBackgroundImage);
 
-  const isMobile = useMediaQuery(600);
+  const isMobile = useMediaQuery(768);
 
   const themeCheckBoxOnChange = () => {
     setChecked(!checked);
@@ -42,10 +42,10 @@ const NavBar = () => {
   }, [theme]);
 
   useEffect(() => {
-    mobileChecked
+    mobileChecked && isMobile
       ? (document.body.style.overflow = 'hidden')
       : (document.body.style.overflow = 'auto');
-  }, [mobileChecked]);
+  }, [mobileChecked, isMobile]);
 
   const changeTheme = () => {
     theme[0] === 'white'
@@ -73,9 +73,9 @@ const NavBar = () => {
         />
         <div className={navbarStyles.mobileToggle}>
           <div className={navbarStyles.hamburgerContainer}>
-            <span className={navbarStyles.hambuger}></span>
-            <span className={navbarStyles.hambuger}></span>
-            <span className={navbarStyles.hambuger}></span>
+            {[0, 1, 2].map((item) => (
+              <span key={item} className={navbarStyles.hambuger}></span>
+            ))}
           </div>
         </div>
         <ul className={navbarStyles.navLinks}>
