@@ -2,11 +2,16 @@
 import { Link, animateScroll as scroll } from 'react-scroll';
 import {
   faPhoneAlt,
-  faMapMarker,
-  faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import footerStyles from './Footer.module.scss';
+
+const footerContact = [
+  { src: '/svg/mail.svg', type: 'mailto:' },
+  { src: '/svg/phone.svg', type: 'tel' },
+  ,
+  { src: '/svg/whatsapp.svg', type: null },
+];
 
 const Footer = () => {
   const duration = () => {
@@ -25,26 +30,36 @@ const Footer = () => {
           </span>
         </div>
         <div className={footerStyles.footerContact}>
-          <div className={footerStyles.footerContactInfo}>
-            <span>
-              <FontAwesomeIcon icon={faPhoneAlt} />
-            </span>
+          {[0, 1, 2].map((item) => (
+            <a
+              key={item}
+              href='tel:07064378577'
+              className={footerStyles.footerContactInfo}
+            >
+              <span className={footerStyles.footerIcon}>
+                <FontAwesomeIcon icon={faPhoneAlt} />
+              </span>
 
-            <div className='info'>+234 0706 437 8577</div>
-          </div>
-          <div className={footerStyles.footerContactInfo}>
+              <span className={footerStyles.contactLabel}>
+                +234 0706 437 8577
+              </span>
+            </a>
+          ))}
+          {/* <div className={footerStyles.footerContactInfo}>
             <span>
               <FontAwesomeIcon icon={faMapMarker} />
             </span>
 
-            <div className='info'>Lagos, Nigeria</div>
+            <span className='info'>Lagos, Nigeria</span>
           </div>
           <div className={footerStyles.footerContactInfo}>
             <span>
               <FontAwesomeIcon icon={faEnvelope} />
             </span>
-            <div className={footerStyles.info}>ezenwachigozie12@gmail.com</div>
-          </div>
+            <span className={footerStyles.info}>
+              ezenwachigozie12@gmail.com
+            </span>
+          </div> */}
         </div>
         <div className={footerStyles.footerLinks}>
           <ul className={footerStyles.footerLinksContainer}>

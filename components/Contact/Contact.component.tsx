@@ -140,7 +140,7 @@ const Contact = () => {
         <div className={contactStyles.imageContainer}>
           {/* <Contacts /> */}
           <Image
-            src='/images/contact-me.webp'
+            src='/images/contact-gif.webp'
             alt='contactMe'
             className={contactStyles.image}
             layout='fill'

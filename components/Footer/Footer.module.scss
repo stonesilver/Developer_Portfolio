@@ -53,16 +53,23 @@
       }
 
       .footerContactInfo {
-        display: grid;
-        grid-template-columns: max-content auto;
-        column-gap: 1rem;
-        align-items: center;
+        display: flex;
+        width: 100%;
+        border: 1px solid red;
 
         span {
           display: flex;
           align-items: center;
           width: 18px;
           height: auto;
+        }
+
+        .footerIcon {
+          // flex: 1;
+        }
+
+        .contactLabel {
+          flex: 1;
         }
       }
     }
