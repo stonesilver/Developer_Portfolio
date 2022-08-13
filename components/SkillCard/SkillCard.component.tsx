@@ -1,17 +1,16 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
 import skillStyles from './SkillCard.module.scss';
 
 interface skillCardProps {
-  icon: IconDefinition;
+  iconSrc: string;
   name: string;
 }
 
-const SkillCard = ({ icon, name }: skillCardProps) => {
+const SkillCard = ({ iconSrc, name }: skillCardProps) => {
   return (
     <div className={skillStyles.skillCard}>
       <div className={skillStyles.icon}>
-        <FontAwesomeIcon icon={icon} />
+        <Image width={500} height={500} src={iconSrc} />
       </div>
       <div className={skillStyles.cardBody}>
         <span className={skillStyles.text}>{name}</span>

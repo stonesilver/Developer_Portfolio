@@ -1,59 +1,52 @@
-import {
-  faDatabase, faAtom
-} from '@fortawesome/free-solid-svg-icons';
-import {
-  faHtml5, faCss3Alt, faSass, faJs, faReact, faGoogle, faNodeJs, faGithub, 
-} from '@fortawesome/free-brands-svg-icons';
-
 export const skillsArray = [
   {
     name: 'HTML',
-    icon: faHtml5,
+    iconSrc: '/svg/html-5.svg',
   },
   {
     name: 'SASS',
-    icon: faSass,
+    iconSrc: '/svg/sass.svg',
   },
   {
     name: 'CSS',
-    icon: faCss3Alt,
+    iconSrc: '/svg/css3.svg',
   },
   {
     name: 'Javascrript',
-    icon: faJs,
+    iconSrc: '/svg/javascript.svg',
   },
   {
     name: 'ReactJs',
-    icon: faReact,
+    iconSrc: '/svg/reactjs.svg',
   },
   {
     name: 'Googling',
-    icon: faGoogle,
+    iconSrc: '/svg/google.svg',
   },
   {
     name: 'NextJs',
-    icon: faReact,
+    iconSrc: '/svg/nextjs.svg',
   },
   {
     name: 'PostgreSQL',
-    icon: faDatabase,
+    iconSrc: '/svg/postgresql.svg',
   },
   {
     name: 'Redux',
-    icon: faAtom,
+    iconSrc: '/svg/redux.svg',
   },
-  
+
   {
     name: 'Express',
-    icon: faNodeJs,
+    iconSrc: '/svg/express.svg',
   },
   {
     name: 'MongoDb',
-    icon: faDatabase,
+    iconSrc: '/svg/mongodb.svg',
   },
-  
+
   {
     name: 'Git',
-    icon: faGithub,
+    iconSrc: '/svg/git.svg',
   },
 ];

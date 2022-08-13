@@ -8,8 +8,8 @@ const Skills = () => {
     <div className={skillsStyles.skills} id='skills'>
       <SectionHeader text='Skills' info='My Arsenal of Skills' />
       <div className={skillsStyles.skillsRow}>
-        {skillsArray.map(({ name, icon }, index) => (
-          <SkillCard key={index} icon={icon} name={name} />
+        {skillsArray.map(({ name, iconSrc }, index) => (
+          <SkillCard key={index} iconSrc={iconSrc} name={name} />
         ))}
       </div>
     </div>

@@ -44,6 +44,8 @@
     flex-direction: column;
     width: 100%;
     padding: 0 clamp(0.5rem, 1vw, 1.2rem);
+    border-left: 1px solid;
+    border-right: 1px solid;
 
     .ProjectCardTitle {
       font-size: clamp(1.3rem, 1.8vw, 2rem);
@@ -53,6 +55,7 @@
     .ProjectCardDescription {
       flex: 1;
       font-size: clamp(0.9rem, 1.06vw, 1rem);
+      line-height: 27px;
     }
 
     .btns {

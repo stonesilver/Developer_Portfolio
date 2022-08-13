@@ -39,13 +39,13 @@ const Intro = () => {
                   backgroundColor={true}
                   type={false}
                   submitting
+                  liveLink='https://drive.google.com/file/d/1Y5G9I4T9LKvQug2PNkTU2Z2AlYBRdUe0/view?usp=drivesdk'
                 />
                 <Button
                   text='Hire Me'
                   backgroundColor={false}
                   type={false}
                   submitting
-                  liveLink=''
                   githubLink=''
                 />
               </div>

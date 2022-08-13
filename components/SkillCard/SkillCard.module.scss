@@ -6,24 +6,18 @@
   justify-content: center;
   align-items: center;
   width: max-content;
-  height: 11.8rem;
-  grid-gap: 0.5rem;
+  grid-gap: 0.75rem;
   padding: 0.5rem 1rem;
-  border-radius: 0 0 30px 0;
-  border: 1px solid $fillColor;
-  box-shadow: 0px 0px 2px $fillColor;
+  border-radius: 0 0 1.875rem 0;
+  box-shadow: 0px 0px 3px $fillColor;
 
   .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100px;
-    font-size: clamp(5rem, 5.5vw, 6rem);
+    height: 8.125rem;
+    width: 8.125rem;
   }
 
   .cardBody {
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 }

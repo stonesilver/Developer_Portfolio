@@ -19,7 +19,6 @@ const Button = ({
 }: buttonProps) => {
   const openLinkInNewtab = () => {
     (githubLink || liveLink) && window.open(githubLink || liveLink, '_blank');
-    // githubLink || (liveLink && window.open(githubLink || liveLink, '_blank'));
   };
 
   return !type ? (
