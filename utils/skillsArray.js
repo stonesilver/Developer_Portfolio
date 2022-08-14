@@ -20,10 +20,6 @@ export const skillsArray = [
     iconSrc: '/svg/reactjs.svg',
   },
   {
-    name: 'Googling',
-    iconSrc: '/svg/google.svg',
-  },
-  {
     name: 'NextJs',
     iconSrc: '/svg/nextjs.svg',
   },
@@ -44,7 +40,10 @@ export const skillsArray = [
     name: 'MongoDb',
     iconSrc: '/svg/mongodb.svg',
   },
-
+  {
+    name: 'Googling',
+    iconSrc: '/svg/google.svg',
+  },
   {
     name: 'Git',
     iconSrc: '/svg/git.svg',

@@ -5,6 +5,8 @@ import Scroll from '../Scroll/Scroll.component';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import Image from 'next/image';
+import TextInput from './TextInput/TextInput';
+import TextArea from './TextArea/TextArea';
 import contactStyles from './Contact.module.scss';
 
 interface State {
@@ -88,41 +90,28 @@ const Contact = () => {
   return (
     <div className={contactStyles.contact} id='contact'>
       <SectionHeader text='Contact' info='Send a message or make an inquire' />
+
       <div className={contactStyles.contentContainer}>
         <div className={contactStyles.formContainner}>
           <form onSubmit={handleOnSubmit}>
-            <label htmlFor='name' className={contactStyles.name}>
-              <input
-                type='text'
-                name='name'
-                value={inputs.name}
-                id={contactStyles.name}
-                placeholder='name'
-                required
-                onChange={handleOnChange}
-              />
-            </label>
-            <label htmlFor='email' className={contactStyles.email}>
-              <input
-                type='email'
-                name='email'
-                value={inputs.email}
-                id={contactStyles.email}
-                placeholder='email'
-                required
-                onChange={handleOnChange}
-              />
-            </label>
-            <label htmlFor='message' className={contactStyles.message}>
-              <textarea
-                name='message'
-                value={inputs.message}
-                id={contactStyles.message}
-                placeholder='message'
-                required
-                onChange={handleOnChange}
-              ></textarea>
-            </label>
+            <TextInput
+              name='name'
+              value={inputs.name}
+              onChange={handleOnChange}
+            />
+
+            <TextInput
+              name='email'
+              value={inputs.email}
+              onChange={handleOnChange}
+            />
+
+            <TextArea
+              name='message'
+              value={inputs.message}
+              onChange={handleOnChange}
+            />
+
             <Button
               text={
                 !status.submitting
@@ -137,8 +126,8 @@ const Contact = () => {
             />
           </form>
         </div>
+        
         <div className={contactStyles.imageContainer}>
-          {/* <Contacts /> */}
           <Image
             src='/images/contact-gif.webp'
             alt='contactMe'

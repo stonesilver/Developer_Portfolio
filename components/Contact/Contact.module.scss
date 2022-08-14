@@ -1,13 +1,11 @@
 .contact {
   position: relative;
-  width: 100%;
-  // height: 100vh;
 
   .contentContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 6rem;
-    margin-top: .7rem;
+    margin-top: 0.7rem;
 
     .formContainner {
       width: 100%;
@@ -18,48 +16,10 @@
         flex-direction: column;
         grid-gap: 2rem;
         padding-bottom: 1rem;
+        margin-top: 1rem;
 
         @media screen and (max-width: 768px) {
           grid-gap: 0;
-        }
-
-        label {
-          width: 100%;
-          height: 3rem;
-          border: none;
-          border-radius: 3px;
-          overflow: hidden;
-          box-shadow: 0px 0px 2px #272626;
-
-          @media screen and (max-width: 768px) {
-            margin-bottom: 2rem;
-          }
-
-          input {
-            width: 100%;
-            height: 100%;
-            border: none;
-            outline: none;
-            font-size: calc(0.6rem + 0.5vw);
-            background: #f7f6f6;
-            padding-left: 1rem;
-          }
-        }
-
-        .message {
-          width: 100%;
-          height: 10rem;
-          box-shadow: 0px 0px 2px #272626;
-
-          #message {
-            width: 100%;
-            height: 100%;
-            border: none;
-            outline: none;
-            font-size: calc(0.6em + 0.5vw);
-            background: #f7f6f6;
-            padding-left: 1rem;
-          }
         }
       }
     }
@@ -68,6 +28,7 @@
       position: relative;
       width: 100%;
       height: 75%;
+      margin-top: 1rem;
 
       .image {
         width: 100%;
