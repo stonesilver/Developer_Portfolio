@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 import { darkBackground, lightBackground } from '../../utils/background';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
+import { navLinks } from '../../utils/navLinks';
 import navbarStyles from './navbar.module.scss';
 
 const NavBar = () => {
@@ -79,46 +80,18 @@ const NavBar = () => {
           </div>
         </div>
         <ul className={navbarStyles.navLinks}>
-          <li className={navbarStyles.link}>
-            <ScrollLink
-              to='about'
-              smooth={true}
-              duration={duration}
-              onClick={closeHamburgerMenu}
-            >
-              About
-            </ScrollLink>
-          </li>
-          <li className={navbarStyles.link}>
-            <ScrollLink
-              to='skills'
-              smooth={true}
-              duration={duration}
-              onClick={closeHamburgerMenu}
-            >
-              Skills
-            </ScrollLink>
-          </li>
-          <li className={navbarStyles.link}>
-            <ScrollLink
-              to='projects'
-              smooth={true}
-              duration={duration}
-              onClick={closeHamburgerMenu}
-            >
-              Projects
-            </ScrollLink>
-          </li>
-          <li className={navbarStyles.link}>
-            <ScrollLink
-              to='contact'
-              smooth={true}
-              duration={duration}
-              onClick={closeHamburgerMenu}
-            >
-              Contact
-            </ScrollLink>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link} className={navbarStyles.link}>
+              <ScrollLink
+                to={link}
+                smooth={true}
+                duration={duration}
+                onClick={closeHamburgerMenu}
+              >
+                {link}
+              </ScrollLink>
+            </li>
+          ))}
         </ul>
 
         <div className={navbarStyles.theme}>

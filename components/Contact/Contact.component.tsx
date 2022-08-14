@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import SectionHeader from '../SectionHeader/SectionHeader.component';
 import Button from '../button/Button.component';
-import Scroll from '../Scroll/Scroll.component';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import Image from 'next/image';
 import TextInput from './TextInput/TextInput';
@@ -126,7 +124,7 @@ const Contact = () => {
             />
           </form>
         </div>
-        
+
         <div className={contactStyles.imageContainer}>
           <Image
             src='/images/contact-gif.webp'
@@ -135,9 +133,6 @@ const Contact = () => {
             layout='fill'
           />
         </div>
-      </div>
-      <div className={contactStyles.scrollUp}>
-        <Scroll icon={faArrowUp} text='Scroll Up' reverse={true} />
       </div>
     </div>
   );
