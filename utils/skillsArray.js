@@ -16,6 +16,10 @@ export const skillsArray = [
     iconSrc: '/svg/javascript.svg',
   },
   {
+    name: 'Typescrript',
+    iconSrc: '/images/typescript.webp',
+  },
+  {
     name: 'ReactJs',
     iconSrc: '/svg/reactjs.svg',
   },
